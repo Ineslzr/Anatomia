@@ -1,1 +1,132 @@
-@charset "ISO-8859-1";
+.bg-light {
+    background-color: #63646463!important;
+    box-shadow: 0px 2px 10px rgba(0,0,0,.5);
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.55);
+}
+.navbar-light .navbar-nav .nav-link:hover, .nav-link:focus {
+    color: black;
+    border-bottom: 2px solid black;
+    padding-bottom: 1px;
+}
+.btn-outline-success {
+    color: #252a37;
+    border-color: #252a37;
+}
+.btn-outline-success:hover, .btn-outline-success:focus {
+    color: #252a37;
+    border-color: #252a37;
+    background-color: #f4d529;
+}
+.btn-primary {
+    color: #e3e3e3!important;
+    background-color: #252a37!important;
+    border-color: #252a37!important;
+}
+.btn-primary:hover .btn-primary:focus {
+    color: #e3e3e3!important;
+    background-color: #252a37!important;
+    border-color: #252a37!important;
+}
+
+.img-fluid {
+    width: 100%!important;
+    max-width: 100%;
+    height: auto;
+}
+
+.row>* {
+    flex-shrink: 0;
+    /*padding-right: calc(var(--bs-gutter-x)/ 2);
+    padding-left: calc(var(--bs-gutter-x)/ 2);
+    margin-top: var(--bs-gutter-y);*/
+}
+
+/*element de gauche*/
+.col-md-3{
+    margin-left: 20px;
+    border-radius: 30px;
+}
+.left-link{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+}
+.nav-link:hover, .nav-link:focus {
+    color: black;
+    border-bottom: 2px solid black;
+    padding-bottom: 1px;
+}
+.nav-left{
+    color: #988a2f;
+}
+/*element de milieu*/
+.img-center{
+    width: 70%!important;
+    max-width: 50%;
+    height: auto;
+}
+.col-md-6{
+    margin-left: 20px;
+    border-radius: 30px;
+}
+
+/*element de droite*/
+.col-md-3 .droite{
+    margin-left: 20px;
+    border-radius: 30px;
+    margin-right: 30px;
+}
+.right-link{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.card .text-center{
+    text-align: center;
+    width: 16rem;
+}
+.card-body{
+    text-align: center;
+}
+.btn-link-right{
+    font-size: 10px;
+}
+body{
+    background-color: #e1effe;
+}
+
+
+/*page de connexion*/
+
+.main-head{
+    height: 150px;
+    background: #FFF;
+   
+}
+.sidenav {
+    height: 100%;
+    background-color: #000;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.main {
+    border-radius: 10px;
+    margin: 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+}
+
+@media screen and (max-width: 450px) {
+    .login-form{
+        margin-top: 10%;
+    }
+
+    .register-form{
+        margin-top: 10%;
+    }
+}
+
