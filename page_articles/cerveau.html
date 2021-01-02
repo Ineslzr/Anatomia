@@ -1,43 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang=fr>
 <head>
     <meta charset= "UTF-8"/>
     <title> Le cerveau</title>
-    <LINK href="bootstrap.min.css" rel="stylesheet" type="text/css">
-    <LINK href="styleArticle.css" rel="stylesheet">
+    <LINK href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <LINK href="../css/styleArticle.css" rel="stylesheet">
 </head>
 
 <body>
 <nav class="navbar navbar-expand-sm navbar-light" style="background-color:rgb(37,42,55);">
     <a href="#" class="navbar-brand px-5">
-        <img  src="img/logo.png" alt="logo_nouvelle"/>
+        <img  src="../img/logo.png" alt="logo_nouvelle"/>
     </a>
 
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav" >
             <li class="nav-item ">
-                <a href="#" class="nav-link">Home</a>
+                <a class="nav-link active" aria-current="page" href="../index.php">
+                    <img src="../image-accueil/home.png" width="30" height="30" alt="">
+                </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">Anatomie</a>
+                <a href="../galerie.html" class="nav-link">Anatomie</a>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link">Enseignement</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">Quiz</a>
+                <a href="../accueil_quiz.html" class="nav-link">Quiz</a>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link">Dictionnaire</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">Discussion</a>
+                <a href="../accueil_discussion.html" class="nav-link">Discussion</a>
             </li>
             <li class="nav-item ">
                 <a href="#" class="nav-link">Contact</a>
             </li>
         </ul>
         <ul class="navbar-nav ms-auto px-5">
+            <?php
+                if(isset($_SESSION['nomUtilisateur'])){
+                    echo "<li class=\"nav-item\">
+                        <a class=\"nav-link\" href=\"../monProfil.php\">Mon Compte</a>
+                    </li>";
+                }
+            ?>
             <li class="nav-item ">
                 <a href="#" class="nav-link">Sign Up</a>
             </li>
@@ -51,7 +60,7 @@
 </nav>
 
 <header>
-    <img src="img/cerveau_intro.jpg" alt="header_img"/>
+    <img src="../img/cerveau_intro.jpg" alt="header_img"/>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
@@ -83,7 +92,7 @@
                 <p>Le lobe occipital: il s’occupe surtout de la vision. Il traite et interprète ce que nous voyons en analysant la forme, la couleur et le mouvement de ce qui nous entoure.</p>
 
                 <div class="text-center mt-2">
-                    <img src="img/lobes.jpg" class="rounded" alt="img_lobes">
+                    <img src="../img/lobes.jpg" class="rounded" alt="img_lobes">
                 </div>
 
                 <p>On a de plus le cervelet qui contrôle l’équilibre et la coordination des mouvements et le tronc cérébral qui est le point de passage entre les hémisphères et la moelle épinière. </p>
@@ -96,7 +105,7 @@
                 <p>Je suis sûr que vous avez déjà entendu parlé des synapses en SVT. C’est justement par l'intermédiaire de ces synapses que ces neurones communiquent.</p>
 
                 <div class="text-center mt-2">
-                    <img src="img/synapse.png" class="rounded" alt="img_synapse">
+                    <img src="../img/synapse.png" class="rounded" alt="img_synapse">
                 </div>
 
                 <p>Les neurones communiquent par des signaux électriques qu’on appelle influx nerveux.L’influx nerveux transporte des vésicules synaptiques et poursuit son chemin jusqu’à la terminaison pré-synaptique. Il va ensuite relâcher les neurotransmetteurs qui contiennent les informations dans la fente synaptique.</p>
@@ -110,7 +119,7 @@
 
 
                 <div class="rounded-3 border border-3 border-warning">
-                    <img src="img/saviez_vous.png" alt="lsv">
+                    <img src="../img/saviez_vous.png" alt="lsv">
                     <p>Le cerveau ne possède aucun nerf, il est donc  incapable de ressentir la douleur. </p>
                 </div>
 
@@ -119,28 +128,28 @@
 
                 <h3> Découvrez nos autres articles ! </h3>
                 <div class="single-content">
-                    <img src="img/cerveau.jpeg" alt="cerveau">
+                    <img src="../img/cerveau.jpeg" alt="cerveau">
                     <div class="text-content">
                         <a href="#"><h4>Le cerveau</h4></a>
                     </div>
                 </div>
 
                 <div class="single-content">
-                    <img src="img/coude.jpg" alt="coude">
+                    <img src="../img/coude.jpg" alt="coude">
                     <div class="text-content">
                         <a href="#"><h4>Le coude</h4></a>
                     </div>
                 </div>
 
                 <div class="single-content">
-                    <img src="img/systeme_digestif.jpg" alt="sys_dig">
+                    <img src="../img/systeme_digestif.jpg" alt="sys_dig">
                     <div class="text-content">
                         <a href="#"><h4>Le système digestif</h4></a>
                     </div>
                 </div>
 
                 <div class="single-content">
-                    <img src="img/genou.jpg" alt="genou">
+                    <img src="../img/genou.jpg" alt="genou">
                     <div class="text-content">
                         <a href="#"><h4>Le genou</h4></a>
                     </div>
@@ -149,28 +158,28 @@
                 <h3>Faites un quiz ! </h3>
 
                 <div class="single-content">
-                    <img src="img/quiz.jpg" alt="quiz">
+                    <img src="../img/quiz.jpg" alt="quiz">
                     <div class="text-content">
                         <a href="#"><h4>quiz 1</h4></a>
                     </div>
                 </div>
 
                 <div class="single-content">
-                    <img src="img/quiz.jpg" alt="quiz">
+                    <img src="../img/quiz.jpg" alt="quiz">
                     <div class="text-content">
                         <a href="#"><h4>quiz 2</h4></a>
                     </div>
                 </div>
 
                 <div class="single-content">
-                    <img src="img/quiz.jpg" alt="quiz">
+                    <img src="../img/quiz.jpg" alt="quiz">
                     <div class="text-content">
                         <a href="#"><h4>quiz 3</h4></a>
                     </div>
                 </div>
 
                 <div class="single-content">
-                    <img src="img/quiz.jpg" alt="quiz">
+                    <img src="../img/quiz.jpg" alt="quiz">
                     <div class="text-content">
                         <a href="#"><h4>quiz 4</h4></a>
                     </div>
@@ -200,10 +209,9 @@
                 </form>
             </div>
         </div>
-
-
-
     </section>
+    <a href="../index2.php?module=commentaire&action=afficher_commentaire" id="lien_voir_commentaire">Voir les commentaires</a>
+    <div id="commentaires"></div>
 </div>
 
 <footer style="background-color:rgb(37,42,55);">
@@ -212,14 +220,17 @@
             <div class="col text-center">
                 <h1 class="text-capitalize font-weight-light p-3 " style="color: rgb(244,213,41);"> Suivez-nous!</h1>
 
-                <a href="https://twitter.com/?lang=fr"><img src="img/twitter.png" alt="icon_twitter"></a>
-                <a href="https://www.instagram.com/?hl=fr"><img src="img/insta.png" alt="icon_insta"></a>
-                <a href="https://fr-fr.facebook.com/"><img src="img/facebook.png" alt="icon_facebook"></a>
+                <a href="https://twitter.com/?lang=fr"><img src="../img/twitter.png" alt="icon_twitter"></a>
+                <a href="https://www.instagram.com/?hl=fr"><img src="../img/insta.png" alt="icon_insta"></a>
+                <a href="https://fr-fr.facebook.com/"><img src="../img/facebook.png" alt="icon_facebook"></a>
 
             </div>
         </div>
     </div>
 </footer>
+
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../js/commentaire.js"></script>
 
 
 
