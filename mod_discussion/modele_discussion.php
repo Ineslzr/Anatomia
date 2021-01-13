@@ -28,14 +28,28 @@ class ModeleDiscussion extends Connexion{
 	}
 
 	function getMessageParent(){
-		$prepare = self::$bdd->prepare("SELECT idMessage,auteur_message,message,date_message,parent_id FROM message where parent=1;");
-		$prepare-> execute();
+        $idSujet=$_GET['idSujet'];
+		$prepare = self::$bdd->prepare("SELECT idMessage,auteur_message,message,date_message,parent_id FROM message where parent=1 AND idSujet=?;");
+		$prepare-> execute(array($idSujet));
 		return $prepare->fetchAll();
 	}
 
 	function getMessageChildren(){
-		$prepare = self::$bdd->prepare("SELECT idMessage,auteur_message,message,date_message,parent_id FROM message where parent=0;");
-		$prepare-> execute();
+        $idSujet=$_GET['idSujet'];
+		$prepare = self::$bdd->prepare("SELECT idMessage,auteur_message,message,date_message,parent_id FROM message where parent=0 AND idSujet=?;");
+		$prepare-> execute(array($idSujet));
 		return $prepare->fetchAll();
 	}
+
+    function afficher_liste_discussion(){
+        $prepare=self::$bdd->prepare("SELECT * FROM sujetDiscu; ");
+        $prepare-> execute();
+        return $prepare->fetchAll();
+    }
+
+    function soumettre_sujet(){
+        $sujet=$_POST['proposition_sujet'];
+        $prepare=self::$bdd->prepare("INSERT INTO sujetdiscu(titre_sujet) VALUES(?);");
+        $prepare->execute(array($sujet));
+    }
 }

@@ -23,9 +23,19 @@ class ModDiscussion{
 			case "afficher_discussion":
 				$this->controleur->afficher_discussion();
 				break;
+
 			case "form_reponse":
 				$this->controleur->form_reponse();
 				break;
+
+            case "afficher_liste_discussion":
+                $this->controleur->afficher_liste_discussion();
+                break;
+
+            case "soumettre_sujet":
+                $this->controleur->soumettre_sujet();
+                break;
+
 			default:
 				echo "Pas de valeur";
 				break;

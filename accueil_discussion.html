@@ -63,9 +63,23 @@
   <h1>Participer à une discussion</h1>
 
 
-  <!--A faire: fonction dans le module qui génère tous les liens vers nos quiz-->
+  <div class="container">
+    <p>Bienvenue dans l'espace discussion, ici vous pouvez discuter avec d'autre autour de nombreux sujets, vous pouvez même proposer un sujet de discussion<p>
 
-  <a href="discussion.html">Discussion 1</a>
+    <form action="" method="POST">
+      <h4>Proposer un sujet de discussion </h4>
+      <div class="form-group col-lg-12">
+        <input type="text" name="proposition_sujet" id="proposition_sujet" class="form-control">
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" id="sujet">Soumettre</button>
+      </div>
+    </form>
+    <br>
+    <div id="liste_discussion" class="row">
+
+    </div>
+  </div>
 
 
   <footer style="background-color:rgb(37,42,55);">
@@ -82,6 +96,9 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/discussion.js"></script>
 
 </body>
 </html> 

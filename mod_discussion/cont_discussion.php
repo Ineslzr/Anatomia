@@ -29,6 +29,16 @@ class ContDiscussion {
 			$this->vue->form_reponse();
 		}
 
+        function afficher_liste_discussion(){
+            $tab=$this->modele->afficher_liste_discussion();
+            $this->vue->afficher_liste_discussion($tab);
+        }
+
+        function soumettre_sujet(){
+            $this->modele->soumettre_sujet();
+            $this->afficher_discussion();
+        }
+
 
 }
 

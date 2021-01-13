@@ -67,10 +67,10 @@
 			<h3 class="text-center card-header">Il n'y a qu'une seule bonne réponse par question, bonne chance!</h3>
 		</div><br>
 
-		<div id="quiz"></div>
-    	<div id="score">
+        <input type="submit" name="start" value="start" class="start btn btn-success m-auto" <?php echo "id=\"".$_GET['idQuiz']."\""; ?>  >
 
-		</div>
+        <div id="quiz"></div>
+    	<div id="score"></div>
 
 	</div>
 

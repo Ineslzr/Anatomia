@@ -24,6 +24,10 @@ class ModQuiz{
 					$this->controleur->verifierRep();
 					break;
 
+                case "afficher_liste_quiz":
+                    $this->controleur->afficher_liste_quiz();
+                    break;
+
 				default:
 					echo "Pas de valeur";
 					break;

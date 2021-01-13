@@ -24,19 +24,20 @@ class ContQuiz {
 		}
 
 		function afficher_quiz(){
-
-			for($i=1;$i<=5;$i++){
-				$question=$this->modele->getQuestion($i);
-				$reponse=$this->modele->getReponse($i);
+				$question=$this->modele->getQuestion();
+				$reponse=$this->modele->getReponse();
 				$this->vue->afficher_quiz($question,$reponse);
-			}
-				
 		}
 
 
 		function verifierRep(){
 			$this->modele->verifierRep();
 		}
+
+        function afficher_liste_quiz(){
+            $tab=$this->modele->afficher_liste_quiz();
+            $this->vue->afficher_liste_quiz($tab);
+        }
 
 
 
