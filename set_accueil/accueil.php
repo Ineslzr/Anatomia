@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-    <link href="style.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
 
 	<title>Accueil</title>
 </head>
@@ -18,7 +18,7 @@
 				/*INES*/
 				//require_once('C:/wamp64/www/...../set_accueil/header.php');
 				/*DARINA*/
-				require_once('C:/wamp64/www/Home/set_accueil/header.php');
+				require_once('header.php');
 			?>
 		</header>
 
@@ -55,7 +55,7 @@
 					<div class="row">
 						<h1>BONJOUR</h1>
 						<div class="text-center">
-		    				<img src="image-accueil/stickman.png" class="img-center" alt="Responsive image">	
+		    				<img src="../image-accueil/stickman.png" class="img-center" alt="Responsive image">	
 						</div>
 					</div>
 				</section>
@@ -65,7 +65,7 @@
 
 						<div class="right-link text-center">
 							<div class="card text-center" style="width: 8.5rem;">
-								<img src="image-accueil/cerveau.jpg" class="card-img-top img-fluid" alt="Responsive image">
+								<img src="../image-accueil/cerveau.jpg" class="card-img-top img-fluid" alt="Responsive image">
 								<div class="card-body">
 									<h5 class="card-title">Card title</h5>
 								    <p class="card-text"></p>
@@ -73,7 +73,7 @@
 								</div>
 							</div>
 							<div class="card text-center" style="width: 8.5rem;">
-								<img src="image-accueil/systeme_digestif.jpg" class="card-img-top img-fluid" alt="Responsive image">
+								<img src="../image-accueil/systeme_digestif.jpg" class="card-img-top img-fluid" alt="Responsive image">
 								<div class="card-body">
 									<h5 class="card-title">Card title</h5>
 								    <p class="card-text"></p>
@@ -81,7 +81,7 @@
 								</div>
 							</div>
 							<div class="card text-center" style="width: 8.5rem;">
-								<img src="image-accueil/poumon.jpg" class="card-img-top img-fluid" alt="Responsive image">
+								<img src="../image-accueil/poumon.jpg" class="card-img-top img-fluid" alt="Responsive image">
 								<div class="card-body">
 									<h5 class="card-title">Card title</h5>
 								    <p class="card-text"></p>
@@ -89,7 +89,7 @@
 								</div>
 							</div>
 							<div class="card text-center" style="width: 8.5rem;">
-								<img src="image-accueil/female.png" class="card-img-top img-fluid" alt="Responsive image">
+								<img src="../image-accueil/female.png" class="card-img-top img-fluid" alt="Responsive image">
 								<div class="card-body">
 									<h5 class="card-title">Card title</h5>
 								    <p class="card-text"></p>
@@ -97,7 +97,7 @@
 								</div>
 							</div>
 							<div class="card text-center" style="width: 8.5rem;">
-								<img src="image-accueil/male.png" class="card-img-top img-fluid" alt="Responsive image">
+								<img src="../image-accueil/male.png" class="card-img-top img-fluid" alt="Responsive image">
 								<div class="card-body">
 									<h5 class="card-title">Card title</h5>
 								    <p class="card-text"></p>
@@ -105,7 +105,7 @@
 								</div>
 							</div>
 							<div class="card text-center" style="width: 8.5rem;">
-								<img src="image-accueil/circuit_neuronal.jpg" class="card-img-top img-fluid" alt="Responsive image">
+								<img src="../image-accueil/circuit_neuronal.jpg" class="card-img-top img-fluid" alt="Responsive image">
 								<div class="card-body">
 									<h5 class="card-title">Card title</h5>
 								    <p class="card-text"></p>
@@ -113,7 +113,7 @@
 								</div>
 							</div>
 							<div class="card text-center" style="width: 8.5rem;">
-								<img src="image-accueil/muscles.jpg" class="card-img-top img-fluid" alt="Responsive image">
+								<img src="../image-accueil/muscles.jpg" class="card-img-top img-fluid" alt="Responsive image">
 								<div class="card-body">
 									<h5 class="card-title">Card title</h5>
 								    <p class="card-text"></p>
@@ -134,7 +134,7 @@
 	    		/*INES*/
 				//require_once('C:/wamp64/www/...../set_accueil/footer.php');
 				/*DARINA*/
-				require_once('C:/wamp64/www/Home/set_accueil/footer.php');
+				require_once('footer.php');
 	    	?>
 		</footer>
 	</body>

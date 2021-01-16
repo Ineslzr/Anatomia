@@ -23,14 +23,14 @@
 					/*INES*/
 					//include 'C:/wamp64/www/.....mod_connexion/mod_connexion.php';
 					/*DARINA*/
-					include 'C:/wamp64/www/Home/mod_connexion/mod_connexion.php';
+					include './mod_connexion/mod_connexion.php';
 					$module = new ModConnexion();
 					break;
 				case 'accueil':
 					/*INES*/
 					//include 'C:/wamp64/www/...../set_accueil/accueil.php';
 					/*DARINA*/
-					require 'C:/wamp64/www/Home/set_accueil/accueil.php';
+					require './set_accueil/accueil.php';
 					break;
 				default:
 					die("Interdiction d'accès à ce module");

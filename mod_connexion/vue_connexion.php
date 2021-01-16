@@ -18,7 +18,7 @@
 			/*INES*/
 			//require_once('C:/wamp64/www/......');
 			/*DARINA*/
-			require_once('C:/wamp64/www/Home/set_connexion/connexion.php');
+			require_once('set_connexion/connexion.php');
 		}
 
 		function form_inscription(){
@@ -33,8 +33,8 @@
 
 			/*INES*/
 			//require_once('C:/wamp64/www/......');
-			/*DARINA*/
-			require_once('C:/wamp64/www/Home/set_connexion/inscription.php');
+			/*DARINAC*/
+			require_once('set_connexion/inscription.php');
 		}
 
 	}

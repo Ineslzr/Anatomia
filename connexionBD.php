@@ -5,7 +5,7 @@
 
 		public static function initConnexion(){
 			try {
-				$dns = "mysql:host=localhost;dbname=espace_membre;";
+				$dns = "mysql:host=localhost;dbname=anatomia;charset=utf8";
 				$user = "root";
 				$password="";
 				self::$bdd = new PDO($dns,$user,$password);
