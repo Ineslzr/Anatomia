@@ -19,29 +19,11 @@ class ModeleQuiz extends Connexion{
 
 	function getReponse(){
 		$idQuiz=$_GET['idQuiz'];
-
 		$prepare = self::$bdd->prepare("SELECT idReponse,reponse,reponse.idQuestion FROM reponse inner join question on reponse.idQuestion=question.idQuestion AND question.idQuiz=?;");
 		$prepare-> execute(array($idQuiz));
 		return $prepare-> fetchAll();
 	}
 
-	function verifierRep(){
-
-		if(isset($_POST['choix'])){
-			$selected =$_POST['choix'];
-			
-			$prepare = self::$bdd->prepare("SELECT correct FROM reponse where idReponse=?; ");
-			$prepare-> execute(array((int)$selected));
-			$tab=$prepare->fetch();
-			if($tab['correct']==0){
-				echo "Mauvaise réponse";
-			}
-			else {
-				echo "Bonne réponse";
-			}
-
-		}
-	}
 
     function afficher_liste_quiz(){
         $prepare=self::$bdd->prepare("SELECT idQuiz, nom_quiz FROM quiz; ");

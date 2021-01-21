@@ -30,16 +30,14 @@ class ContQuiz {
 		}
 
 
-		function verifierRep(){
-			$this->modele->verifierRep();
-		}
-
-        function afficher_liste_quiz(){
+        function accueil_quiz(){
             $tab=$this->modele->afficher_liste_quiz();
-            $this->vue->afficher_liste_quiz($tab);
+            $this->vue->accueil_quiz($tab);
         }
 
-
+         function getVue(){
+            return $this->vue;
+         }
 
 }
 

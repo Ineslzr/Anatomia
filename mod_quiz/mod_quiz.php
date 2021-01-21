@@ -3,6 +3,7 @@
 include_once 'cont_quiz.php';
 
 class ModQuiz{
+    private $controleur;
 	public function __construct(){
 
 		$this->controleur=new ContQuiz();
@@ -11,7 +12,7 @@ class ModQuiz{
 			$action=$_GET["action"];							
 		}
 		else {
-			$action="default";
+			$action="accueil_quiz";
 		}
 
 			switch($action){
@@ -19,13 +20,8 @@ class ModQuiz{
 				case "afficher_quiz":
 					$this->controleur->afficher_quiz();
 					break;
-
-				case "verifierRep":
-					$this->controleur->verifierRep();
-					break;
-
-                case "afficher_liste_quiz":
-                    $this->controleur->afficher_liste_quiz();
+                case "accueil_quiz":
+                    $this->controleur->accueil_quiz();
                     break;
 
 				default:
@@ -33,6 +29,10 @@ class ModQuiz{
 					break;
 			}
 	}
+
+    function getControleur(){
+        return $this->controleur;
+    }
 
 }
 

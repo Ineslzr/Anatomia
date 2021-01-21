@@ -18,13 +18,13 @@
 	    			<a class="nav-link" href="#">Enseignements</a>
 	    		</li>
 	    		<li class="nav-item">
-	    			<a class="nav-link" href="../accueil_quiz.html">Quiz</a>
+	    			<a class="nav-link" href="index.php?module=quiz">Quiz</a>
 	    		</li>
 	    		<li class="nav-item">
 	    			<a class="nav-link" href="#">Dictionnaire</a>
 	    		</li>
 	    		<li class="nav-item">
-	    			<a class="nav-link" href="../accueil_discussion.html">Discussion</a>
+	    			<a class="nav-link" href="index.php?module=discussion">Discussion</a>
 	    		</li>
 	    		<li class="nav-item">
 	    			<a class="nav-link" href="#">Contact</a>

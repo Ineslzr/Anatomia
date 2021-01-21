@@ -8,15 +8,9 @@ class ContDiscussion {
 		private $vue;
 
 		function __construct(){
-
 			$this->vue = new VueDiscussion();
 			$this->modele = new ModeleDiscussion();
-
 		}	
-
-		function ajout_message(){
-			$this->modele->ajout_message();
-		}
 
 		function afficher_discussion(){
 			
@@ -25,18 +19,13 @@ class ContDiscussion {
 			$this->vue->afficher_discussion($messageParent,$messageChildren);
 		}
 
-		function form_reponse(){
-			$this->vue->form_reponse();
-		}
-
-        function afficher_liste_discussion(){
+        function accueil_discussion(){
             $tab=$this->modele->afficher_liste_discussion();
-            $this->vue->afficher_liste_discussion($tab);
+            $this->vue->accueil_discussion($tab);
         }
 
-        function soumettre_sujet(){
-            $this->modele->soumettre_sujet();
-            $this->afficher_discussion();
+        function getVue(){
+		    return $this->vue;
         }
 
 
