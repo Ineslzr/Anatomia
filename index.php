@@ -1,44 +1,55 @@
 <?php session_start(); ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<header>
-		<?php
-			/*INES*/
-			//require_once('C:/wamp64/www/...../set_accueil/header.php');
-			/*DARINA*/
-			//require_once('C:/wamp64/www/Home/set_accueil/header.php');
+<?php
+/*require './set_accueil/accueil.php';*/
+require_once "connexionBD.php";
+Connexion::initConnexion();
 
-			require_once('connexionBD.php');
+$module = isset($_GET['module']) ? $_GET['module']: "accueil";
+switch($module) {
+    case "commentaire" :
+        include "./mod_commentaire/mod_commentaire.php";
+        $module=new ModCommentaire();
+        break;
 
-			Connexion::initConnexion();
+    case "connexion":
+        include "./mod_connexion/mod_connexion.php";
+        $module=new ModConnexion();
+        break;
 
-			$module = isset($_GET['module']) ? $_GET['module']: "accueil";
-			switch ($module) {
-				case 'connexion':
-					/*INES*/
-					//include 'C:/wamp64/www/.....mod_connexion/mod_connexion.php';
-					/*DARINA*/
-					include './mod_connexion/mod_connexion.php';
-					$module = new ModConnexion();
-					break;
-				case 'accueil':
-					/*INES*/
-					//include 'C:/wamp64/www/...../set_accueil/accueil.php';
-					/*DARINA*/
-					require './set_accueil/accueil.php';
-					break;
-				default:
-					die("Interdiction d'accès à ce module");
-			}
-		?>
-	</header>
+    case "quiz":
+        $title="Quiz";
+        include "./composants/comp_nav/comp_nav.php";
+        $nav = new ComposantNav();
+        include "./mod_quiz/mod_quiz.php";
+        $module=new ModQuiz();
+        $jquery="./js/jquery-3.5.1.min.js";
+        $js="./js/quiz.js";
+        break;
 
-</body>
-</html>
+    case "profil":
+        include "./mod_profil/mod_profil.php";
+        $module=new ModProfil();
+        break;
 
-		
+    case "discussion":
+        $title="Discussion";
+        include "./composants/comp_nav/comp_nav.php";
+        $nav = new ComposantNav();
+        include "./mod_discussion/mod_discussion.php";
+        $module=new ModDiscussion();
+        $jquery="./js/jquery-3.5.1.min.js";
+        $js="./js/discussion.js";
+        break;
+    case 'accueil':
+        require './set_accueil/accueil.php';
+        break;
+
+    default :
+        die ("Interdiction d'accès à ce module");
+}
+
+require("template.php");
+
+?>
+
