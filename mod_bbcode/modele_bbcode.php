@@ -17,10 +17,12 @@
 
 			if (strlen($titre) > 0) {
 				if (strlen($titre) <= 30) {
+					$titre = self::remove_script_balises($titre);
 					$titre_present = self::$bdd->prepare("SELECT titre_article FROM articles where titre_article = ?;");
 					$titre_present->execute(array($titre));
 					if (empty($titre_present->fetch())) {
 						if (strlen($contenu) > 0) {
+							$contenu = self::remove_script_balises($contenu);
 							$prepare = self::$bdd->prepare("INSERT INTO articles(titre_article,idSection,contenu,auteur) VALUES(?,?,?,?);");
 							$prepare-> execute(array($titre,$id_section,$contenu,$auteur));
 							return $titre;
@@ -64,24 +66,38 @@
 	        $article_decodage = str_replace("[/i]", "</em>", $article_decodage);//italique
 	       
 	        $article_decodage = str_replace("[u]", "<u>", $article_decodage);
-	        $article_decodage = str_replace("[/u]", "</u>", $article_decodage);//underline         
+	        $article_decodage = str_replace("[/u]", "</u>", $article_decodage);//underline    
 
-	        $article_decodage = str_replace("[size=150]","<span style=\"font-size:32px;>\"", $article_decodage);
 
-	        $article_decodage = str_replace("[size=100]","<span style=\"font-size:24px;>\"", $article_decodage);
+	        $article_decodage = str_replace("[size=150]","<span style=\"font-size:32px;>\"", $article_decodage);//h1
 
-	        $article_decodage = str_replace("[size=85]","<span style=\"font-size:18px;>\"", $article_decodage);
+	        $article_decodage = str_replace("[size=100]","<span style=\"font-size:24px;>\"", $article_decodage);//h2
 
-	        $article_decodage = str_replace("[size=50]","<span style=\"font-size:16px;>\"", $article_decodage);
+	        $article_decodage = str_replace("[size=85]","<span style=\"font-size:18px;>\"", $article_decodage);//h3
 
-	        $article_decodage = str_replace("[/size]","<span/>", $article_decodage);
-	        //taille de la police
+	        $article_decodage = str_replace("[size=50]","<span style=\"font-size:16px;>\"", $article_decodage);//h4
+
+	        $article_decodage = str_replace("[/size]","<span/>", $article_decodage);//taille de la police
+
 
 	        $article_decodage = str_replace("[center]", "<br><div classe=\"col-lg-8 col-md-10 mx-auto\"><br>", $article_decodage);
-	        $article_decodage = str_replace("[/center]", "</div>", $article_decodage);
-	        //texte-aligne-center
+	        $article_decodage = str_replace("[/center]", "</div>", $article_decodage);//texte-aligne-center
 
 	        return $article_decodage;
+		}
+
+		function remove_script_balises($article_encode){
+			$article_encode = str_replace("<script type=\"", "", $article_encode);  // <script type="text/javascript"></script> 
+	      	$article_encode = str_replace("texte/javascript", "", $article_encode);
+	      	$article_encode = str_replace("\"></script>", "", $article_encode);
+
+	      	$article_encode = str_replace("<sript>", "", $article_encode); // <script></script>
+	      	$article_encode = str_replace("</sript>", "", $article_encode);
+
+	      	$article_encode = str_replace("<?php", "", $article_encode); /*<?php ?>*/
+	      	$article_encode = str_replace("?>", "", $article_encode);
+
+	      	return $article_encode;
 		}
 
 		function erreur404(){
@@ -91,3 +107,4 @@
 			return $error;
 		}
 	}
+?>

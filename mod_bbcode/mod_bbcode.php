@@ -30,12 +30,6 @@
 				case 'afficher_article':
 					$this->controleur->afficher_article();
 					break;
-				case 'encoder':
-					$this->controleur->encoder();
-					break;
-				case 'decoder':
-					$this->controleur->decoder();
-					break;
 				default:
 					$this->controleur->erreur404(); 
 					break;

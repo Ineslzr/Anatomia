@@ -38,9 +38,6 @@
 			$this->vue->afficher_article($titre_article,$article);
 		}
 
-		function decoder(){
-			$this->modele->decoder();
-		}
 		function erreur404(){
 			$error = $this->modele->erreur404();
 			$this->vue->erreur404($error);
