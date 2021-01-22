@@ -2,7 +2,7 @@
 	include_once'vue_discussion.php';
 	include_once'modele_discussion.php';
 
-class ContDiscussion {
+	class ContDiscussion {
 
 		private $modele;
 		private $vue;
@@ -13,7 +13,6 @@ class ContDiscussion {
 		}	
 
 		function afficher_discussion(){
-			
 			$messageParent=$this->modele->getMessageParent();
 			$messageChildren=$this->modele->getMessageChildren();
 			$this->vue->afficher_discussion($messageParent,$messageChildren);
@@ -24,11 +23,14 @@ class ContDiscussion {
             $this->vue->accueil_discussion($tab);
         }
 
+        function erreur404(){
+			$error = $this->modele->erreur404();
+			$this->vue->erreur404($error);
+		}
+
         function getVue(){
 		    return $this->vue;
         }
-
-
-}
+	}
 
 ?>

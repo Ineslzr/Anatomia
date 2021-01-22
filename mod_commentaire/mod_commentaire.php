@@ -1,21 +1,21 @@
 <?php
 
-include_once 'cont_commentaire.php';
+	include_once 'cont_commentaire.php';
 
-class ModCommentaire {
+	class ModCommentaire {
 
-	private $controleur;
+		private $controleur;
 
-	public function __construct(){
+		public function __construct(){
 
-		$this->controleur=new ContCommentaire();
+			$this->controleur=new ContCommentaire();
 
-		if(isset($_GET["action"])){
-			$action=$_GET["action"];							
-		}
-		else {
-			$action="ajout_commentaire";
-		}
+			if(isset($_GET["action"])){
+				$action=$_GET["action"];							
+			}
+			else {
+				$action="ajout_commentaire";
+			}
 
 			switch($action){
 
@@ -35,13 +35,12 @@ class ModCommentaire {
 					$this->controleur->articles_lues();
 					break;
 				default:
-					echo "Pas de valeur";
+					$this->controleur->erreur404(); 
 					break;
 			}
+		}
+		function getControleur(){
+        	return $this->controleur;
+    	}
 	}
-
-
-}
-
-
 ?>

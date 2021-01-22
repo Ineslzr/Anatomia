@@ -1,13 +1,11 @@
 <?php
-header('Content-Type: application/json');
-try
-{
-    $bdd = new PDO('mysql:host=localhost;dbname=anatomia;charset=utf8', 'root', '');
-}
-catch (Exception $e)
-{
-    die('Erreur : ' . $e->getMessage());
-}
+	header('Content-Type: application/json');
+	
+	try{
+	    $bdd = new PDO('mysql:host=localhost;dbname=anatomia;charset=utf8', 'root', '');
+	}catch (Exception $e){
+	    die('Erreur : ' . $e->getMessage());
+	}
 
 	$sujet=$_POST['proposition_sujet'];
 	$prepare=$bdd->prepare("INSERT INTO sujetdiscu(titre_sujet) VALUES(?);");

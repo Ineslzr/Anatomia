@@ -1,19 +1,20 @@
 <?php 
 
-include_once 'cont_quiz.php';
+	include_once 'cont_quiz.php';
 
-class ModQuiz{
-    private $controleur;
-	public function __construct(){
+	class ModQuiz{
+	    
+	    private $controleur;
+		public function __construct(){
 
-		$this->controleur=new ContQuiz();
+			$this->controleur=new ContQuiz();
 
-		if(isset($_GET["action"])){
-			$action=$_GET["action"];							
-		}
-		else {
-			$action="accueil_quiz";
-		}
+			if(isset($_GET["action"])){
+				$action=$_GET["action"];							
+			}
+			else {
+				$action="accueil_quiz";
+			}
 
 			switch($action){
 
@@ -25,15 +26,13 @@ class ModQuiz{
                     break;
 
 				default:
-					echo "Pas de valeur";
+					$this->controleur->erreur404(); 
 					break;
 			}
+		}
+
+	    function getControleur(){
+	        return $this->controleur;
+	    }
 	}
-
-    function getControleur(){
-        return $this->controleur;
-    }
-
-}
-
 ?>

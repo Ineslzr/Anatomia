@@ -1,41 +1,73 @@
 <?php
-
-	class VueConnexion {
+	
+	include_once'vue_generique.php';
+	
+	class VueConnexion extends VueGenerique {
 
 		public function __construct() {
 
 		}
 
 		function form_connexion(){
-
-			/*echo "<form action=\"index.php?module=connexion&action=connexion\" method=\"post\">
-				<p>Nom d'utilisateur : <input type=\"text\" name=\"nomUtilisateur\" /></p>
-				<p>Mot de passe : <input type=\"password\" name=\"password\" /></p>
-				
-				<p><input type=\"submit\" value=\"OK\"></p>
-			</form>";*/
-
-			/*INES*/
-			//require_once('C:/wamp64/www/......');
-			/*DARINA*/
-			require_once('set_connexion/connexion.php');
+			?>
+			<link href="./style.css" href="./style_set_connexion.css" rel="stylesheet">
+			<form action="index.php?module=connexion&action=connexion" method="post">
+				<div class="main">
+				 	<div class="col-md-4 border text-center">
+				    	<div class="login-form">
+					        <div class="form-group">
+					            <label>Nom d'utilisateur</label>
+					            <input type="text" class="form-control" placeholder="Pseudo">
+					        </div>
+					        <br>
+				          	<div class="form-group">
+				             	<label>Mot de passe</label>
+				             	<input type="password" class="form-control" placeholder="Mot de passe">
+				         	</div>
+				         	<br>
+				          	<button type="submit" class="btn btn-black" style="border: solid;">Login</button>
+				          	<br>
+				    	</div>
+				 	</div>
+				</div>
+			</form>
+			<?php
 		}
 
 		function form_inscription(){
-
-			/*echo "<form action=\"index.php?module=connexion&action=inscription\" method=\"post\">
-				<p>Nom d'utilisateur : <input type=\"text\" name=\"nomUtilisateur\" id=\"username\"/></p>
-				<p>Mot de passe : <input type=\"password\" name=\"password\"  id=\"password\" /></p>
-				<p>Email :<input type=\"email\" name=\"email\" id=\"email\" /></p>
-				
-				<p><input type=\"submit\" value=\"OK\"></p>
-			</form>";*/
-
-			/*INES*/
-			//require_once('C:/wamp64/www/......');
-			/*DARINAC*/
-			require_once('set_connexion/inscription.php');
+			?>
+			<link href="./style.css" href="./style_set_connexion.css" rel="stylesheet">
+			<form action="index.php?module=connexion&action=inscription" method="post">
+				<div class="main">
+				 	<div class="col-md-4 border text-center">
+				    	<div class="login-form">
+				       		<form>
+						        <div class="form-group">
+						            <label>Nom d'utilisateur</label>
+						            <input type="text" class="form-control" placeholder="Pseudo">
+						        </div>
+						        <br>
+						        <div class="form-group">
+						        	<label>Adresse Mail</label>
+						        	<input type="email" class="form-control" placeholder="E-mail">
+						        </div>
+						        <br>
+					          	<div class="form-group">
+					             	<label>Mot de passe</label>
+					             	<input type="password" class="form-control" placeholder="Mot de passe">
+					         	</div>
+					         	<br>
+					          	<button type="submit" class="btn btn-black" style="border: solid;">Login</button>
+					          	<br>
+				       		</form>
+				    	</div>
+				 	</div>
+				</div>
+			</form>
+			<?php
 		}
-
+		function erreur404($error){
+			echo $error;
+		}
 	}
 ?>

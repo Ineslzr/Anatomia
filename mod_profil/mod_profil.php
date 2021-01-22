@@ -1,35 +1,33 @@
 <?php
 
-include_once 'cont_profil.php';
+	include_once 'cont_profil.php';
 
-class ModProfil {
+	class ModProfil {
 
-	private $controleur;
+		private $controleur;
 
-	public function __construct(){
+		public function __construct(){
 
-		$this->controleur=new ContProfil();
+			$this->controleur=new ContProfil();
 
-		if(isset($_GET["action"])){
-			$action=$_GET["action"];							
-		}
-		else {
-			$action="default";
-		}
+			if(isset($_GET["action"])){
+				$action=$_GET["action"];							
+			}
+			else {
+				$action="default";
+			}
 
 			switch($action){
-
 				case "articles_lues":
 					$this->controleur->articles_lues();
 					break;
 				default:
-					echo "Pas de valeur";
+					$this->controleur->erreur404(); 
 					break;
 			}
+		}
+		function getControleur(){
+        	return $this->controleur;
+    	}
 	}
-
-
-}
-
-
 ?>

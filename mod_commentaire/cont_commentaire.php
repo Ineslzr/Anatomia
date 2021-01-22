@@ -2,7 +2,7 @@
 	include_once'vue_commentaire.php';
 	include_once'modele_commentaire.php';
 
-class ContCommentaire {
+	class ContCommentaire {
 
 		private $modele;
 		private $vue;
@@ -32,9 +32,12 @@ class ContCommentaire {
 			$tab=$this->modele->articles_lues();
 			$this->vue->articles_lues($tab);
 		}
-
-
-
-}
-
+		function erreur404(){
+			$error = $this->modele->erreur404();
+			$this->vue->erreur404($error);
+		}
+		function getVue(){
+			return $this->vue;
+		}
+	}
 ?>

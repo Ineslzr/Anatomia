@@ -2,54 +2,71 @@
 
 <?php
 /*require './set_accueil/accueil.php';*/
-require_once "connexionBD.php";
-Connexion::initConnexion();
+    require_once "connexionBD.php";
 
-$module = isset($_GET['module']) ? $_GET['module']: "accueil";
-switch($module) {
-    case "commentaire" :
-        include "./mod_commentaire/mod_commentaire.php";
-        $module=new ModCommentaire();
-        break;
+    Connexion::initConnexion();
 
-    case "connexion":
-        include "./mod_connexion/mod_connexion.php";
-        $module=new ModConnexion();
-        break;
+    $module = isset($_GET['module']) ? $_GET['module']: "accueil";
+    
+    switch($module) {
+        case "commentaire" :
+            include "./mod_commentaire/mod_commentaire.php";
+            $module=new ModCommentaire();
+            break;
 
-    case "quiz":
-        $title="Quiz";
-        include "./composants/comp_nav/comp_nav.php";
-        $nav = new ComposantNav();
-        include "./mod_quiz/mod_quiz.php";
-        $module=new ModQuiz();
-        $jquery="./js/jquery-3.5.1.min.js";
-        $js="./js/quiz.js";
-        break;
+        case "connexion":
+            include "./mod_connexion/mod_connexion.php";
+            $module=new ModConnexion();
+            break;
 
-    case "profil":
-        include "./mod_profil/mod_profil.php";
-        $module=new ModProfil();
-        break;
+        case "quiz":
+            $title="Quiz";
+            include "./composants/comp_nav/comp_nav.php";
+            $nav = new ComposantNav();
+            include "./mod_quiz/mod_quiz.php";
+            $module=new ModQuiz();
+            $jquery="./js/jquery-3.5.1.min.js";
+            $js="./js/quiz.js";
+            break;
 
-    case "discussion":
-        $title="Discussion";
-        include "./composants/comp_nav/comp_nav.php";
-        $nav = new ComposantNav();
-        include "./mod_discussion/mod_discussion.php";
-        $module=new ModDiscussion();
-        $jquery="./js/jquery-3.5.1.min.js";
-        $js="./js/discussion.js";
-        break;
-    case 'accueil':
-        require './set_accueil/accueil.php';
-        break;
+        case "profil":
+            include "./mod_profil/mod_profil.php";
+            $module=new ModProfil();
+            break;
 
-    default :
-        die ("Interdiction d'accès à ce module");
-}
+        case 'ajout_article':
+            include './mod_bbcode/mod_bbcode.php';
+            $module = new ModBBcode();
+            break;
 
-require("template.php");
+        case 'lecture_page':
+            include './mod_lecturePage/mod_lecturePage.php';
+            $module = new ModLecture_Page();
+            break;
+
+        case 'lire_article':
+            include './mod_article/mod_article.php';
+            $module = new ModArticle();
+            break;
+
+        case "discussion":
+            $title="Discussion";
+            include "./composants/comp_nav/comp_nav.php";
+            $nav = new ComposantNav();
+            include "./mod_discussion/mod_discussion.php";
+            $module=new ModDiscussion();
+            $jquery="./js/jquery-3.5.1.min.js";
+            $js="./js/discussion.js";
+            break;
+        case 'accueil':
+            require './set_accueil/accueil.php';
+            break;
+
+        default :
+            die ("Interdiction d'accès à ce module");
+    }
+
+    require("template.php");
 
 ?>
 

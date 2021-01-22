@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Load jQuery  -->
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+	<!-- Load WysiBB JS and Theme -->
+	<script src="http://cdn.wysibb.com/js/jquery.wysibb.min.js"></script>
+	<link rel="stylesheet" href="http://cdn.wysibb.com/css/default/wbbtheme.css" />
+	<!-- Init WysiBB BBCode editor -->
+	<script>
+		$(document).ready(function() {
+			var wbbOpt = {
+	 			buttons: "bold,italic,underline,|fsverybig,fs_big,fs_normal,fs_small,|,bullist,|,justifycenter,justifyleft,|,link,|",
+   				lang: "fr",
+	 		}
+	  		$("#editor").wysibb(wbbOpt);
+		})
+	</script>
+</head>
+
+<body>
+	<br><br><br>
+	<div class="container-fluid" style="background-color: #E9E4E4">
+		<section class="poster_article">
+			<h1 class="title"> Postez un article !</h1>
+			<div class="container">
+				<div class="contact-form row">
+					<div class="col-lg-8 col-md-10">
+						<form action="index.php?module=ajout_article&action=ajouter_article" method="post" >
+							<div class="form-group col-lg-9">
+								<div class="row">
+									<input type="text" name="titre_article">
+									<textarea id="editor" name="contenu" class="col-sm-9"></textarea>
+								</div>
+							</div>
+							<div class="form-field col-lg-9">
+								<input class="submit-btn" type="submit" value="POSTER" name="submit" id="poster">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+</html>
