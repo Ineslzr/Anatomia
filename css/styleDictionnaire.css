@@ -1,0 +1,56 @@
+#search_bar{ 
+     margin-left: 15%; 
+     padding:15px; 
+     border-radius: 10px; 
+   } 
+ 
+   input[type=text] { 
+      width: 30%; 
+      -webkit-transition: width 0.15s ease-in-out; 
+      transition: width 0.15s ease-in-out; 
+   } 
+ 
+   /* When the input field gets focus, 
+        change its width to 100% */
+   input[type=text]:focus { 
+     width: 70%; 
+   } 
+ 
+  #liste_mots{ 
+    font-size:  1.5em; 
+    margin-left: 90px; 
+   } 
+ 
+.mot{ 
+   display: list-item;     
+  }
+
+
+.mot a{ 
+   text-decoration: none;     
+}
+
+.col img{
+    width: 55px;
+    height:50px;
+    margin:25px;
+
+}
+
+footer .container {
+    height: 250px;
+}
+footer p{
+    color:red;
+}
+
+.navbar-nav .nav-item .nav-link{
+    color: white;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link:hover{
+    color: rgb(244,213,41);
+}
+
+
