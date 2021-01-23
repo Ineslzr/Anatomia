@@ -1,19 +1,23 @@
 <?php
+
+if(!defined('CONST_INCLUDE'))
+    die('Acces direct interdit !');
 	
 	include_once'vue_generique.php';
 	
 	class VueConnexion extends VueGenerique {
 
 		public function __construct() {
-
+            parent::__construct();
 		}
 
 		function form_connexion(){
 			?>
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-7 col-md-8 mx-auto" style="justify-content: center;">
 			<form action="index.php?module=connexion&action=connexion" method="post"  class="col-lg-8 mx-auto">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-7 col-md-8 mx-auto" style="justify-content: center;">
+
 					    	<div class="login-form" style="background-color: #252a37; padding: 30px; text-align: center; color: white; border-radius: 30px;">
 					    		<h2>Connectez-vous !</h2>
 					    		<br>
@@ -30,10 +34,11 @@
 					          	<button type="submit" class="btn btn-black" style="background-color: #f4d529;color: #252a37; border: solid;">Login</button>
 					          	<br>
 					    	</div>
+            </form>
 					 	</div>
 					</div>
 				</div>
-			</form>
+
 			
 			<?php
 		}

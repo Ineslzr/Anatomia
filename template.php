@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>
-        <?php if (!empty($title)) {
-                echo $title;
-            } 
-        ?>
-        </title>
-        <LINK href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <LINK href="../css/styleArticle.css" rel="stylesheet">
-        <!--<link rel="stylesheet" href="css/stylegalerie.css">-->
-        <link href="./style.css" href="./style_set_connexion.css" rel="stylesheet">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <title><?php if (isset($title)) {
+            echo $title;
+        } ?></title>
+    <LINK href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <LINK <?php if (isset($css)) {
+        echo "href=\"".$css."\"";
+    } ?> rel="stylesheet">
+    <!--<link rel="stylesheet" href="css/stylegalerie.css">-->
+</head>
+<body>
 
-        <?php
-            if (isset($nav)) {
-                echo $nav->afficherNav();
-            }
-            if (isset($module)) {
-                echo $module->getControleur()->getVue()->getAffichage();
-            }
+<?php
+if(isset($nav)){
+    echo $nav->afficherNav();
+}
 
-            if (isset($jquery)) {
-                if (isset($js)) {
-                    echo "<script src=\"".$jquery."\"></script> <script src=\"".$js."\"></script>";
-                }
-            }
-        ?>
-    </body>
+if(isset($module)){
+    if($module != "accueil"){
+        echo $module->getControleur()->getVue()->getAffichage();
+    }
+}
+if(isset($aside)){
+    echo  $aside->afficherAsideArticle();
+}
+?>
+
+<?php
+if(isset($jquery)){
+    echo "<script src=\"".$jquery."\">";
+}
+
+if(isset($js)){
+    echo "<script src=\"".$js."\">";
+}
+
+if(isset($footer)){
+    echo $footer->afficherFooter();
+}
+?>
+
+
+
+</body>
 </html>

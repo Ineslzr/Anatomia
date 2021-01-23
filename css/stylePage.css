@@ -1,0 +1,22 @@
+.navbar-nav .nav-item .nav-link{
+    color: white;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link:hover{
+    color: rgb(244,213,41);
+}
+
+.col img{
+    width: 55px;
+    height:50px;
+    margin:25px;
+
+}
+
+footer .container {
+    height: 250px;
+}
+footer p{
+    color:red;
+}

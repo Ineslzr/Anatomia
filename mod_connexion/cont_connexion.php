@@ -1,5 +1,8 @@
 <?php
 
+    if(!defined('CONST_INCLUDE'))
+    die('Acces direct interdit !');
+
 	include_once'vue_connexion.php';
 	include_once'modele_connexion.php';
 
@@ -23,11 +26,15 @@
 	        if($isPasswordCorrect){
 	        		$_SESSION['nomUtilisateur']=$tab['nomUtilisateur'];
 					$_SESSION['password']=$tab['password'];
-					echo "Vous êtes connecté !";
+                    $_SESSION['email']=$tab['email'];
+                    $_SESSION['role']=$tab['role'];
+                    header('Location:index.php');
 			}	
 			else {
-				echo "Mauvais identifiant ou mot de passe !";
-			}
+                echo "<p class=\"text-center mt-3\"><strong>Mauvais identifiant ou mot de passe !</strong></p>";
+                $this->vue->form_connexion();
+
+            }
 		}
 
 		function form_inscription(){

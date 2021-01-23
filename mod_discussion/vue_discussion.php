@@ -32,15 +32,20 @@
                 ?>
                 </div>
 
-                <form action="" id="form-discussion" method="POST">
-                    <h4>Participez à la discussion ! </h4>
-                    <div class="form-group col-lg-12">
-                        <textarea name="content" id="content" class="form-control" placeholder="Votre commentaire"> </textarea>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary" id="envoi_parent">Commenter</button>
-                    </div>
-                </form>
+                <?php if(isset($_SESSION['nomUtilisateur'])){ ?>
+
+                    <form action="" id="form-discussion" method="POST">
+                        <h4>Participez à la discussion ! </h4>
+                        <div class="form-group col-lg-12">
+                            <textarea name="content" id="content" class="form-control" placeholder="Votre commentaire"> </textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" id="envoi_parent">Commenter</button>
+                        </div>
+                    </form>
+                <?php } else{
+                    echo "<p style=\"font-weight:bold;\" class=\"ms-5\">Pour poster un message, vous devez vous connecter</p>";
+                } ?>
             </div>
             <?php
         }
@@ -51,15 +56,20 @@
             <div class="container">
                 <p>Bienvenue dans l'espace discussion, ici vous pouvez discuter avec d'autre autour de nombreux sujets, vous pouvez même proposer un sujet de discussion<p>
 
-                <form action="" method="POST">
-                    <h4>Proposer un sujet de discussion </h4>
+                    <?php if(isset($_SESSION['nomUtilisateur'])){ ?>
+
+                <form action="" id="form-discussion" method="POST">
+                    <h4>Participez à la discussion ! </h4>
                     <div class="form-group col-lg-12">
-                        <input type="text" name="proposition_sujet" id="proposition_sujet" class="form-control">
+                        <textarea name="content" id="content" class="form-control" placeholder="Votre commentaire"> </textarea>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary" id="sujet">Soumettre</button>
+                        <button type="submit" class="btn btn-primary" id="envoi_parent">Commenter</button>
                     </div>
                 </form>
+                <?php } else{
+                    echo "<p style=\"font-weight:bold;\" class=\"ms-5\">Pour poster un message, vous devez vous connecter</p>";
+                } ?>
                 <br>
 
                 <div id="liste_discussion" class="row">

@@ -1,5 +1,5 @@
 body {
-	background-image:url("../img/discussion_bg.png"); 
+	background-image:url("../img/site/discussion_bg.png");
 }
 
 .navbar-nav .nav-item .nav-link{
@@ -148,7 +148,10 @@ h3 {
 }
 
 footer .container {
-	height: 200px;
+	height: 255px;
+}
+footer p{
+	color:red;
 }
 
 article{

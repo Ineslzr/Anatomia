@@ -13,7 +13,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-sm-0">
                     <li class="nav-item">
                         <a href="./index.php" class="nav-link">
-                            <img src="./img/site/home.png" class="home_img">
+                            <img src="../img/site/home.png" class="home_img">
                         </a>
                     </li>
                     <li class="nav-item">
@@ -43,7 +43,7 @@
                     <?php
                     }
                 ?>
-                </u>
+                </ul>
                 <ul class="navbar-nav ml-md-auto">
                     <li class="nav-item">
                         <a class="nav-link\" href="../monProfil.php">Mon Compte</a>
@@ -72,6 +72,9 @@
                         <a class="nav-link" href="#">Dictionnaire</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="index.php?module=discussion">Discussion</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" id="contact" href="index.php?module=lecture_page&action=lecture_page&id=contact">Contact</a>
                     </li>
                 </ul>
@@ -82,7 +85,7 @@
                     <li>
                         <a class="nav-link" href="index.php?module=connexion&action=form_connexion"><NOBR>Se connecter</NOBR></a>
                     </li>
-                </u>
+                </ul>
                 <?php
             }
         ?>

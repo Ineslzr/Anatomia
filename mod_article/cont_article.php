@@ -1,4 +1,8 @@
 <?php
+    if(!defined('CONST_INCLUDE'))
+        die('Acces direct interdit !');
+
+
 	include_once('vue_article.php');
 	include_once('modele_article.php');
 
@@ -16,15 +20,15 @@
 			$this->vue->page_accueil();
 		}
 
-		function lire($section,$titre_article){
-			$article = $this->modele->lecture($titre_article);
-			$this->vue->lecture($article);
+		function lire(){
+            $article = $this->modele->lecture();
+            $this->vue->lecture($article);
 		}
 
-		function groupe_article($section){
-			$array_article = $this->modele->groupe_article($section);
-			$this->vue->groupe_article($array_article);
-		}
+        function afficher_liste_article(){
+            $articles=$this->modele->get_liste_article();
+            $this->vue->afficher_liste_article($articles);
+        }
 
 		function erreur404(){
 			$error = $this->modele->erreur404();
