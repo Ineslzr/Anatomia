@@ -49,7 +49,7 @@
 			
 				<!-- ELEMENT DU MILIEU -->
 				<section class="col-md-6 border text-center" style="background-color: white;">
-					<h1>BIENVENUE !</h1>
+					<h1>BONJOUR !</h1>
 					<img src=".img/Bitmoji/bienvenue.png" class="img-center">	
 					<p>Petite présentation rapide</p>
 					<p>Le corps humain est une structure où se cache bien des phénomènes et mystères scientifiques !</p>
