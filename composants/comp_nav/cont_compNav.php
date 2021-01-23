@@ -1,25 +1,25 @@
 <?php 
 
-include_once 'modele_compNav.php';
-include_once 'vue_compNav.php';
+	include_once 'modele_compNav.php';
+	include_once 'vue_compNav.php';
 
-class ControleurNav {
+	class ControleurNav {
 
-	private $modele;
-	private $vue;
+		private $modele;
+		private $vue;
 
-	public function __construct(){
+		public function __construct(){
 
-		$this->vue = new VueNav();
-		$this->modele = new ModeleNav();
+			$this->vue = new VueNav();
+			$this->modele = new ModeleNav();
+		}
+
+		public function afficherNav() {
+			$this->vue->afficherNav();
+		}
+
+		function getVue(){
+			return $this->vue;
+		}
 	}
-
-	public function afficherNav() {
-		$this->vue->afficherNav();
-	}
-
-	function getVue(){
-		return $this->vue;
-	}
-
-}
+?>

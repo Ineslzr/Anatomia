@@ -87,11 +87,8 @@
 		}
 
 		function remove_script_balises($article_encode){
-			$article_encode = str_replace("<script type=\"", "", $article_encode);  // <script type="text/javascript"></script> 
-	      	$article_encode = str_replace("texte/javascript", "", $article_encode);
-	      	$article_encode = str_replace("\"></script>", "", $article_encode);
-
 	      	$article_encode = str_replace("<sript>", "", $article_encode); // <script></script>
+			$article_encode = str_replace("<script", "", $article_encode);  // <script type="text/javascript"></script> 
 	      	$article_encode = str_replace("</sript>", "", $article_encode);
 
 	      	$article_encode = str_replace("<?php", "", $article_encode); /*<?php ?>*/

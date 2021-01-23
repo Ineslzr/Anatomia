@@ -16,14 +16,14 @@
 			$this->vue->page_accueil();
 		}
 
-		function lire($titre_article){
+		function lire($section,$titre_article){
 			$article = $this->modele->lecture($titre_article);
 			$this->vue->lecture($article);
 		}
 
-		function erreur404(){
-			$error = $this->modele->erreur404();
-			$this->vue->erreur404($error);
+		function groupe_article($section){
+			$array_article = $this->modele->groupe_article($section);
+			$this->vue->groupe_article($array_article);
 		}
 
 		function erreur404(){

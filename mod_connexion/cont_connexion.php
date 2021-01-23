@@ -18,7 +18,6 @@
 
 		function connexion(){
 			$tab=$this->modele->connexion();
-			var_dump($tab);
 			$isPasswordCorrect=password_verify($_POST['password'],$tab['password']);
 
 	        if($isPasswordCorrect){

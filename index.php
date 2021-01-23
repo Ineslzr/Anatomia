@@ -55,6 +55,8 @@
             $nav = new ComposantNav();
             include "./mod_discussion/mod_discussion.php";
             $module=new ModDiscussion();
+            include './composants/comp_formBBcode/comp_formBBcode.php';
+            $module = new CompBBCode();
             $jquery="./js/jquery-3.5.1.min.js";
             $js="./js/discussion.js";
             break;

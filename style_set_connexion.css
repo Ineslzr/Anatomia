@@ -13,6 +13,11 @@
 
     .login-form{
         margin-top: 80%;
+        background-color: #252a37; 
+        padding: 30px; 
+        text-align: center; 
+        color: white; 
+        border-radius: 30px;
     }
 
     .register-form{
@@ -34,4 +39,5 @@
 .btn-black {
     background-color: #f4d529 !important;
     color: #252a37!important;
+    border: solid;
 }

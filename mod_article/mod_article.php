@@ -17,6 +17,15 @@
 			if (isset($_GET["id"])) {
 				$titre_article = $_GET["id"];
 			}
+			else{
+				$this->controleur->erreur404(); 
+			}
+			if (isset($_GET["name"])) {
+				$section = $_GET["name"];
+			}
+			else{
+				$this->controleur->erreur404(); 
+			}
 
 			switch ($action) {
 				case 'page_accueil':
@@ -25,11 +34,15 @@
 				case 'lire_article':
 					$this->controleur->lire($titre_article);
 					break;
+				case 'groupe_article':
+					$this->controleur->groupe_article($section);
+					break;
 				default:
 					$this->controleur->erreur404(); 
 					break;
 			}
 		}
+		
 		function getControleur(){
 	    	return $this->controleur;
 	    }

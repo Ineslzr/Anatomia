@@ -15,8 +15,12 @@
 			echo $page;
 		}
 
-		function erreur404($error){
-			echo $error;
+		function groupe_article($array_article){
+			foreach ($array_article as $value) {
+				?>
+				
+				<?php
+			}
 		}
 
 		function erreur404($error){

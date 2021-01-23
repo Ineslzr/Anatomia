@@ -2,12 +2,16 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title><?php if (!empty($title)) {
+        <title>
+        <?php if (!empty($title)) {
                 echo $title;
-            } ?></title>
+            } 
+        ?>
+        </title>
         <LINK href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <LINK href="../css/styleArticle.css" rel="stylesheet">
         <!--<link rel="stylesheet" href="css/stylegalerie.css">-->
+        <link href="./style.css" href="./style_set_connexion.css" rel="stylesheet">
     </head>
     <body>
 
@@ -18,9 +22,6 @@
             if (isset($module)) {
                 echo $module->getControleur()->getVue()->getAffichage();
             }
-            ?>
-
-            <?php
 
             if (isset($jquery)) {
                 if (isset($js)) {
