@@ -41,13 +41,13 @@
 
         function accueil_quiz($tab){
             ?>
-            <h1>Testez vos connaissances, faites un Quiz !</h1>
+            <h1 class="my-5">Testez vos connaissances, faites un Quiz !</h1>
             <div class="container">
-                <div id="liste_quiz" class="row">
+                <div id="liste_quiz" class="row mb-5">
             <?php
                     foreach ($tab as $value){
                         echo "<div class=\"card ms-3\" style=\"width: 18rem;\">
-    					  			<img src=\"../img/quiz.jpg\" class=\"card-img-top\" alt=\"img_quiz\">
+    					  			<img src=\"../img/site/quiz.jpg\" class=\"card-img-top\" alt=\"img_quiz\">
     		  						<div class=\"card-body\">
     		    						<h5 class=\"card-title\">".$value['nom_quiz']."</h5>
     		    						<a href=\"index.php?module=quiz&action=afficher_quiz&idQuiz=".$value['idQuiz']."\" class=\"btn btn-primary \" name=\"".$value['idQuiz']."\" id=\"".$value['idQuiz']."\" onClick=\"get_idQuiz(this.id)\">Faire le quiz</a>

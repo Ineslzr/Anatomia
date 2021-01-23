@@ -1,30 +1,42 @@
 <?php
+if(!defined('CONST_INCLUDE'))
+	die('Acces direct interdit !');
 	include_once'vue_generique.php';
 
 	class VueArticle extends VueGenerique{
 		
 		public function __construct(){
-			# code...
-		}
-
-		function page_accueil(){
-
+			parent::__construct();
 		}
 
 		function lecture($page){
 			echo $page;
 		}
 
-		function groupe_article($array_article){
-			foreach ($array_article as $value) {
-				?>
-				
-				<?php
-			}
-		}
+
 
 		function erreur404($error){
 			echo $error;
+		}
+
+		function afficher_liste_article($articles){ ?>
+			<div class="container">
+				<br><h1 class="text-center text-primary">Lire un article</h1><br>
+
+				<div id="liste_article">
+
+					<ul>
+						<?php
+						foreach ($articles as $value) {
+							echo "<li class=\"mot\"><a href=\"index.php?module=lire_article&action=lire_article&idArticle=".$value['idArticle']."\">".$value['titre_article']."</a></li>";
+						}
+
+						?>
+					</ul>
+
+				</div>
+			</div>
+			<?php
 		}
 	}
 ?>

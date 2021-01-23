@@ -1,4 +1,7 @@
 <?php
+if(!defined('CONST_INCLUDE'))
+    die('Acces direct interdit !');
+
 	include_once ('cont_article.php');
 
 	class ModArticle{
@@ -14,6 +17,7 @@
 			else{
 				$action = "page_accueil";
 			}
+			/*
 			if (isset($_GET["id"])) {
 				$titre_article = $_GET["id"];
 			}
@@ -25,18 +29,19 @@
 			}
 			else{
 				$this->controleur->erreur404(); 
-			}
+			}*/
 
 			switch ($action) {
 				case 'page_accueil':
 					$this->controleur->page_accueil();
 					break;
+                case 'afficher_liste_article':
+                    $this->controleur->afficher_liste_article();
+                    break;
 				case 'lire_article':
-					$this->controleur->lire($titre_article);
+					$this->controleur->lire();
 					break;
-				case 'groupe_article':
-					$this->controleur->groupe_article($section);
-					break;
+
 				default:
 					$this->controleur->erreur404(); 
 					break;

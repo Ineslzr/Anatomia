@@ -1,30 +1,30 @@
 <?php
-	include_once('connexionBD.php');
-	include_once ('vue_article.php');
+if(!defined('CONST_INCLUDE'))
+    die('Acces direct interdit !');
 
-	class ModArticle extends Connexion{
+	include_once('connexionBD.php');
+
+
+	class ModeleArticle extends Connexion{
 		
 		public function __construct(){
 			# code...
 		}
 
-		function lecture($titre_article){
-			$prepare = self::$bdd->prepare("SELECT contenu FROM articles WHERE titre_article = ?;");
-			$prepare->execute(array($titre_article));
-
-			$contenu = $prepare->fetch()['contenu'];
-			
-			return $contenu;
+		function lecture(){
+            $idArticle=$_GET['idArticle'];
+            $prepare = self::$bdd->prepare("SELECT contenu FROM articles WHERE idArticle = ?;");
+            $prepare->execute(array($idArticle));
+            $contenu = $prepare->fetch()['contenu'];
+            return $contenu;
 		}
 
-		function groupe_article($section){
-			$prepare = self::$bdd->prepare("SELECT titre_article FROM articles WHERE idSection = ?;");
-			$prepare->execute(array($section));
-
-			$groupe_article = $prepare->fetch()['titre_article'];
-			
-			return $groupe_article;
-		}
+        function get_liste_article(){
+            $idSection=$_GET['idSection'];
+            $prepare=self::$bdd->prepare("SELECT * FROM articles where idSection=?;");
+            $prepare->execute(array($idSection));
+            return $prepare->fetchAll();
+        }
 
 		function erreur404(){
 			$error = self::$bdd->prepare("SELECT contenu FROM page WHERE titre_page = 'erreur404';");

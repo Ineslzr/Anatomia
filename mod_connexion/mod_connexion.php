@@ -1,4 +1,6 @@
 <?php
+if(!defined('CONST_INCLUDE'))
+    die('Acces direct interdit !');
 
 include_once'cont_connexion.php';
 
@@ -26,7 +28,7 @@ include_once'cont_connexion.php';
 				case "connexion":
 					if(isset($_SESSION['password'])){
 						echo "Vous etes déjà connecté";
-						echo "c";
+                        header('Location:index.php');
 					}
 					else{
 						$this->controleur->connexion();
