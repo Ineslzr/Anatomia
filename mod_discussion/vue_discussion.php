@@ -19,7 +19,7 @@ class VueDiscussion extends VueGenerique{
 
         <div class="container">
             <br><h1 class="text-center text-primary">Discussion</h1><br>
-            <h2 class="text-center text-success">Sujet : test de discussion</h2><br>
+            <h2 class="text-center text-success">A vos claviers !</h2><br>
 
             <div class="discussion" <?php echo "data-id=\"".$_GET['idSujet']."\"";?>>
                 <?php
@@ -55,12 +55,14 @@ class VueDiscussion extends VueGenerique{
                     echo "</div>";
                 }
                 ?>
-
             </div>
 
-            <?php if(isset($_SESSION['nomUtilisateur'])){ ?>
-
+            <?php 
+            if(isset($_SESSION['nomUtilisateur'])){ 
+            ?>
                 <form action="" id="form-discussion" method="POST">
+                    <br>
+                    <br>
                     <h4>Participez à la discussion ! </h4>
                     <div class="form-group col-lg-12">
                         <textarea name="content" id="content" class="form-control" placeholder="Votre commentaire"> </textarea>
@@ -69,32 +71,43 @@ class VueDiscussion extends VueGenerique{
                         <button type="submit" class="btn btn-primary" id="envoi_parent">Commenter</button>
                     </div>
                 </form>
-            <?php } else{
-                echo "<p style=\"font-weight:bold;\" class=\"ms-5\">Pour poster un message, vous devez vous connecter</p>";
-            } ?>
-
+            <?php
+            } 
+            else{
+                echo "<h3 style=\"font-weight:bold; text-align: center;\" class=\"ms-5\">Pour poster un message, vous devez vous connecter</h3><br>";
+            } 
+            ?>
+            <div style="text-align: center;">
+                <img src="../img/Bitmoji/ines_salutToi!.png" class="img-center bitmoji"><img src="../img/Bitmoji/darina_salut.png" class="img-center bitmoji">
+            </div>
         </div>
         <?php
     }
 
     function accueil_discussion($tab){
 
-        ?><h1>Participer à une discussion</h1>
+        ?>
+        <br>
+        <br>
+        <h1>Participer à une discussion</h1>
         <div class="container">
             <p>Bienvenue dans l'espace discussion, ici vous pouvez discuter avec d'autre autour de nombreux sujets, vous pouvez même proposer un sujet de discussion<p>
 
-                <?php if(isset($_SESSION['nomUtilisateur'])){ ?>
-            <form action="" method="POST">
-                <h4>Proposer un sujet de discussion </h4>
-                <div class="form-group col-lg-12">
-                    <input type="text" name="proposition_sujet" id="proposition_sujet" class="form-control">
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary" id="sujet">Soumettre</button>
-                </div>
-            </form>
+            <?php 
+            if(isset($_SESSION['nomUtilisateur'])){ ?>
+                <form action="" method="POST">
+                    <h4>Proposer un sujet de discussion </h4>
+                    <div class="form-group col-lg-12">
+                        <input type="text" name="proposition_sujet" id="proposition_sujet" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary" id="sujet">Soumettre</button>
+                    </div>
+                </form>
             <br>
-            <?php } else {
+            <?php
+            } 
+            else {
                 echo "<p style=\"font-weight:bold;\" class=\"ms-5\">Pour poster un commentaire, vous devez vous connecter</p>";
             }
             ?>
@@ -111,6 +124,11 @@ class VueDiscussion extends VueGenerique{
                 }
                 ?>
 
+            </div>
+            <br>
+            <br>
+            <div style="text-align: center;">
+                <img src="../img/Bitmoji/ines_salutToi!.png" class="img-center bitmoji"><img src="../img/Bitmoji/darina_salut.png" class="img-center bitmoji">
             </div>
         </div>
         <?php

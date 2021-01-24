@@ -1,9 +1,8 @@
 <?php
-if(!defined('CONST_INCLUDE'))
-    die('Acces direct interdit !');
-?>
 
-<?php
+	if(!defined('CONST_INCLUDE'))
+	    die('Acces direct interdit !');
+	
 
 	include_once('vue_article.php');
 	include_once('modele_article.php');

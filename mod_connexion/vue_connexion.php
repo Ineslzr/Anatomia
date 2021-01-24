@@ -24,7 +24,7 @@ if(!defined('CONST_INCLUDE'))
 			    		<div class="col-lg-8 me-auto mx-auto">
 					        <div class="form-group">
 					            <label>Nom d'utilisateur</label>
-					            <input type="text" name="nomUtilisateur" class="form-control col-md-2" placeholder="Pseudo" style="">
+					            <input type="text" name="nomUtilisateur" class="form-control" placeholder="Pseudo" style="">
 					        </div>
 					        <br>
 				          	<div class="form-group">
@@ -80,8 +80,7 @@ if(!defined('CONST_INCLUDE'))
 			<br>
 	    	<br>
 	    	<div style="text-align: center;">
-	            <img src="../img/Bitmoji/darina_montreDuDoigt.png" class="img-center bitmoji">
-	            <img src="../img/Bitmoji/ines_montreDuDoigt.png" class="img-center bitmoji">
+	            <img src="../img/Bitmoji/darina_montreDuDoigt.png" class="img-center bitmoji"><img src="../img/Bitmoji/ines_montreDuDoigt.png" class="img-center bitmoji">
 	        </div>
 	    	<br>
 	    	<br>

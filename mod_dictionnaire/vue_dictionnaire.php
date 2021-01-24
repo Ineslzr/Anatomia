@@ -22,9 +22,12 @@ if(!defined('CONST_INCLUDE'))
 				<br>
 				<h2 class="text-center text-success"><p>Vous ne connaissez pas un mot ?</p><p>Pas de panique, consultez notre dictionnaire et retrouver la défintion dont vous avez besoin !</p></h2>
 				<br>
-
+				<br>
+				<br>
 				<input id="search_bar" onkeyup="rechercher()" type="text" name="search_bar" placeholder="Rechercher..."> 
-
+				<br>
+				<br>
+				<br>
 				<div id="liste_mots">
 
 				<ul>
@@ -48,12 +51,26 @@ if(!defined('CONST_INCLUDE'))
 		function afficher_definition($definition){ 
 			?>
 			<div class="container">
-			<?php 
-				foreach($definition as $value){
-					echo "<p>".$value['definition']."</p>"; 
-				}
-			?>
-
+				<br>
+				<br>
+				<h1 class="text-center text-primary">Dictionnaire</h1>
+				<br>
+				<h2 class="text-center text-success"><p>Et voilà votre définition !</p></h2>
+				<div style="text-align: center;">
+					<br>
+					<br>
+					<br>
+				<?php 
+					foreach($definition as $value){
+						echo "<h3>".$value['definition']."</h3>"; 
+					}
+				?>
+				<div style="text-align: center;">
+                		<img src="../img/Bitmoji/ines_lectureEtChat.png" class="img-center bitmoji"><img src="../img/Bitmoji/darina_lecture.png" class="img-center bitmoji">
+            		</div>
+				</div>
+			<br>
+			<br>
 			</div>
 			<?php
 		}

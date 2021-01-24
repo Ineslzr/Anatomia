@@ -4,7 +4,7 @@
 
 
         <!-- ELEMENT DE GAUCHE -->
-        <aside class="col-md-2 mx-auto border" style="background-color:white; margin-left: 60px; border-radius: 30px;">
+        <aside class="col-md-2 border" style="background-color:white; margin-left: 60px; border-radius: 30px;">
             <div class="left-link">
                 <a class="nav-link nav-left" href="index.php?module=lire_article&action=afficher_liste_article&idSection=1">Le tête</a>
             </div>
@@ -23,7 +23,9 @@
         </aside>
 
         <!-- ELEMENT DU MILIEU -->
-        <section class="col-md-7 mx-auto border text-center" style="background-color:white; border-radius: 30px;">
+        <section class="col-md-7 border text-center" style="background-color:white; border-radius: 30px;">
+        	<br>
+        	<br>
             <h1>BIENVENUE !</h1>
             <br>
             <img src="../img/Bitmoji/bienvenue.png" class="img-center">
@@ -44,9 +46,9 @@
 
             <h2>Amusez-vous !</h2>
             <!--   style="text-align: center;"  -->
+            <!--   style="background-color: white;"   -->
             <div style="text-align: center;">
-                <img src="../img/Bitmoji/ines_rainbow.png" class="img-center bitmoji">
-                <img src="../img/Bitmoji/darina_dinosaure.png" class="img-center bitmoji">
+                <img src="../img/Bitmoji/ines_rainbow.png" class="img-center bitmoji"><img src="../img/Bitmoji/darina_dinosaure.png" class="img-center bitmoji">
             </div>
             <br>
             <h3>Disclaimer !</h3>
@@ -57,37 +59,36 @@
         </section>
 
         <!-- ELEMENT DE DROITE -->
-        <aside class="col-md-3 mx-auto border text-center droite"style="width: 12rem; background-color: white; border-radius: 30px;">
-            <div class="row">
-                <div class="right-link text-center">
-                    <br>
-                    <h2>Faites un quiz ! </h2>
-                    <br>
-                    <div class="single-content">
-                        <img class="img-fluid" src="../img/site/quiz.jpg" alt="quiz">
-                        <div class="text-content">
-                            <a href="#"><h4>Quiz n°1</h4></a>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="single-content">
-                        <img class="img-fluid" src="../img/site/quiz.jpg" alt="quiz">
-                        <div class="text-content">
-                            <a href="#"><h4>Quiz n°2</h4></a>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="single-content">
-                        <img class="img-fluid" src="../img/site/quiz.jpg" alt="quiz">
-                        <div class="text-content">
-                            <a href="#"><h4>Quiz n°3</h4></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </aside>
+        <aside class="col-md-2 border droite" style="width: 12rem; border-radius: 30px; text-align: center; background-color: white;">
+			<div style="text-align: center;">
+				<br>
+				<h4 style="text-align: center;">Faites un quiz !</h4>
+    			<br>
+				<div class="card" style="background-color: #161727; border-radius: 30px;">
+					<br>
+					<img class="img-fluid" src="../img/site/quiz.jpg" alt="quiz" alt="Responsive image">
+					<div class="card-body">
+					    <a href="#" class="btn btn-primary btn-link-right"><h5>Quiz n°1</h5></a>
+					</div>
+				</div>
+				<br>
+				<div class="card" style="background-color: #161727; border-radius: 30px;">
+					<br>
+					<img class="img-fluid" src="../img/site/quiz.jpg" alt="quiz" alt="Responsive image">
+					<div class="card-body">
+					    <a href="#" class="btn btn-primary btn-link-right"><h5>Quiz n°1</h5></a>
+					</div>
+				</div>
+				<br>
+				<div class="card" style="background-color: #161727; border-radius: 30px;">
+					<br>
+					<img class="img-fluid" src="../img/site/quiz.jpg" alt="quiz" alt="Responsive image">
+					<div class="card-body">
+					    <a href="#" class="btn btn-primary btn-link-right"><h5>Quiz n°1</h5></a>
+					</div>
+				</div>
+			</div>
+		</aside>
         <!-- FIN -->
     </div>
 </div>

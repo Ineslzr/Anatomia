@@ -51,7 +51,7 @@ if(!defined('CONST_INCLUDE'))
                 <div id="liste_quiz" class="row mb-5">
                 <?php
                     foreach ($tab as $value){
-                        echo "<div class=\"card ms-3\" style=\"width: 18rem;\">
+                        echo "<div class=\"card ms-3\" style=\"width: 18rem; margin-right:30px;  border-radius: 30px;\">
     					  			<img src=\"../img/site/quiz.jpg\" class=\"card-img-top\" alt=\"img_quiz\">
     		  						<div class=\"card-body\">
     		    						<h5 class=\"card-title\">".$value['nom_quiz']."</h5>
