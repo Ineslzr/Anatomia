@@ -1,0 +1,37 @@
+body{
+	text-align: center;
+}
+
+.navbar-nav .nav-item .nav-link{
+    color: white;
+    /*font-weight: bold;*/
+    text-align: center;
+    margin-top: 3px;
+}
+
+.navbar-nav .nav-item .nav-link:hover{
+    color: rgb(244,213,41);
+    text-align: center;
+}
+
+.col img{
+    width: 55px;
+    height:50px;
+    margin:25px;
+}
+
+.home_img{
+	width: 30px;
+    height:30px;
+}
+
+img{
+	text-align: center;
+}
+
+footer .container {
+    height: 250px;
+}
+footer p{
+    color:red;
+}

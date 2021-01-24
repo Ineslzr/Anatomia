@@ -1,10 +1,10 @@
 <?php
 
-if(!defined('CONST_INCLUDE'))
-    die('Acces direct interdit !');
+    if(!defined('CONST_INCLUDE'))
+        die('Acces direct interdit !');
 
-include_once'connexionBD.php';
-include_once'vue_connexion.php';
+    include_once'connexionBD.php';
+    include_once'vue_connexion.php';
 
 	class ModeleConnexion extends Connexion{
         private $vue;
@@ -13,8 +13,7 @@ include_once'vue_connexion.php';
             $this->vue = new VueConnexion();
         }
 
-        function inscription($tab)
-        {
+        function inscription($tab){
 
             $id = $tab['nomUtilisateur'];
             $password = $tab['password'];
@@ -34,38 +33,38 @@ include_once'vue_connexion.php';
                         $req = self::$bdd->prepare("INSERT INTO membre(nomUtilisateur,password,email,role) VALUES(?,?,?,?); ");
                         $req->execute(array($id, $password, $email,$role));
                     }
-                } else {
+                } 
+                else {
                     echo "<p class=\"text-center mt-3\"><strong>Taille d'utilisateur ou de mot de passe incorrecte ou email invalide</strong></p>";
                     $this->vue->form_inscription();
                 }
             }
         }
 
-            function connexion(){
-                $nomUtilisateur = $_POST['nomUtilisateur'];
+        function connexion(){
+            $nomUtilisateur = $_POST['nomUtilisateur'];
 
-                try {
-                    $selectprep = self::$bdd->prepare("SELECT nomUtilisateur,password FROM membre WHERE nomUtilisateur=?;");
-                    $selectprep->execute(array($nomUtilisateur));
-                    $resultat = $selectprep->fetch();
-                    return $resultat;
-                } catch (PDOexception $e) {
-                    echo $e->getMessage() . $e->getCode();
-                }
+            try {
+                $selectprep = self::$bdd->prepare("SELECT nomUtilisateur,password FROM membre WHERE nomUtilisateur=?;");
+                $selectprep->execute(array($nomUtilisateur));
+                $resultat = $selectprep->fetch();
+                return $resultat;
+            } catch (PDOexception $e) {
+                echo $e->getMessage() . $e->getCode();
             }
+        }
 
-            function deconnexion(){
-                $_SESSION = array();
-                session_destroy();
-                header('Location:index.php');
-            }
+        function deconnexion(){
+            $_SESSION = array();
+            session_destroy();
+            header('Location:index.php');
+        }
 
-            function erreur404(){
-                $error = self::$bdd->prepare("SELECT contenu FROM page WHERE titre_page = 'erreur404';");
-                $error->execute();
-                $error = $error->fetch()['contenu'];
-                return $error;
-            }
-
+        function erreur404(){
+            $error = self::$bdd->prepare("SELECT contenu FROM page WHERE titre_page = 'erreur404';");
+            $error->execute();
+            $error = $error->fetch()['contenu'];
+            return $error;
+        }
     }
 ?>

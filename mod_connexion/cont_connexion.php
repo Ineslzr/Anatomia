@@ -33,7 +33,6 @@
 			else {
                 echo "<p class=\"text-center mt-3\"><strong>Mauvais identifiant ou mot de passe !</strong></p>";
                 $this->vue->form_connexion();
-
             }
 		}
 
@@ -66,15 +65,5 @@
 		function getVue(){
 			return $this->vue;
 	    }
-
 	}
-?>
-
-
-
-
-
-
-
-
 ?>

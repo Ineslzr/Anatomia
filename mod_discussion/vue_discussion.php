@@ -52,38 +52,47 @@
 
         function accueil_discussion($tab){
             ?>
+            <br>
+            <br>
             <h1>Participer à une discussion</h1>
             <div class="container">
                 <p>Bienvenue dans l'espace discussion, ici vous pouvez discuter avec d'autre autour de nombreux sujets, vous pouvez même proposer un sujet de discussion<p>
 
-                    <?php if(isset($_SESSION['nomUtilisateur'])){ ?>
-
-                <form action="" id="form-discussion" method="POST">
-                    <h4>Participez à la discussion ! </h4>
-                    <div class="form-group col-lg-12">
-                        <textarea name="content" id="content" class="form-control" placeholder="Votre commentaire"> </textarea>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary" id="envoi_parent">Commenter</button>
-                    </div>
-                </form>
-                <?php } else{
-                    echo "<p style=\"font-weight:bold;\" class=\"ms-5\">Pour poster un message, vous devez vous connecter</p>";
-                } ?>
+                <?php 
+                if(isset($_SESSION['nomUtilisateur'])){ 
+                ?>
+                    <form action="" id="form-discussion" method="POST">
+                        <h4>Participez à la discussion ! </h4>
+                        <div class="form-group col-lg-12">
+                            <textarea name="content" id="content" class="form-control" placeholder="Votre commentaire"> </textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" id="envoi_parent">Commenter</button>
+                        </div>
+                    </form>
+                <?php } 
+                else{
+                    echo "<p style=\"font-weight:bold;\" class=\"ms-5\">Pour poster un message, vous devez vous connecter !</p>";
+                } 
+                ?>
                 <br>
-
                 <div id="liste_discussion" class="row">
-            <?php
-                foreach($tab as $value) {
-                    echo "<div class=\"card mt-3\">
-    						<div class=\"card-header\">".$value['titre_sujet']."</div>
-    						<div class=\"card-body\">
-    						<h5 class=\"card-title\">Proposé le : ".$value['date_sujet']."</h5>
-    						<a href=\"index.php?module=discussion&action=afficher_discussion&idSujet=".$value['idSujet']."\" class=\"btn btn-primary\">Discuter !</a>
-    						</div>
-                        </div>";
-                }
-            ?>
+                <?php
+                    foreach($tab as $value) {
+                        echo "<div class=\"card mt-3\">
+        						<div class=\"card-header\">".$value['titre_sujet']."</div>
+        						<div class=\"card-body\">
+        						<h5 class=\"card-title\">Proposé le : ".$value['date_sujet']."</h5>
+        						<a href=\"index.php?module=discussion&action=afficher_discussion&idSujet=".$value['idSujet']."\" class=\"btn btn-primary\">Discuter !</a>
+        						</div>
+                            </div>";
+                    }
+                ?>
+                </div>
+                <br>
+                <br>
+                <div style="text-align: center;">
+                    <img src="../img/Bitmoji/ines_salutToi!.png" class="img-center bitmoji"><img src="../img/Bitmoji/darina_salut.png" class="img-center bitmoji">
                 </div>
             </div>
             <?php

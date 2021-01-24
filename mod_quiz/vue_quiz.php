@@ -44,7 +44,7 @@
             <h1 class="my-5">Testez vos connaissances, faites un Quiz !</h1>
             <div class="container">
                 <div id="liste_quiz" class="row mb-5">
-            <?php
+                <?php
                     foreach ($tab as $value){
                         echo "<div class=\"card ms-3\" style=\"width: 18rem;\">
     					  			<img src=\"../img/site/quiz.jpg\" class=\"card-img-top\" alt=\"img_quiz\">
@@ -54,8 +54,14 @@
     		  						</div>
     							</div>";
                     }
-            ?>
+                    ?>
                 </div>
+                <div style="text-align: center;">
+                    <img src="../img/Bitmoji/ines_bolNouilles.png" class="img-center bitmoji">
+                    <img src="../img/Bitmoji/darina_chekbox.png" class="img-center bitmoji">
+                </div>
+                <br>
+                <br>
             </div>
             <?php
         }

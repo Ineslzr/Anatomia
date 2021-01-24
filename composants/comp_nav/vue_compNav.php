@@ -13,20 +13,19 @@ class VueNav {
 		return $this->vueNav;
 	}
 
-	public function afficherNav() { ?>
-
+	public function afficherNav() { 
+        ?>
         <nav class="navbar navbar-expand-md navbar-light" style="background-color: rgb(37,42,55);">
             <a href="index.php" class="navbar-brand px-5">
                 <img  src="img/site/logo.png" alt="logo_nouvelle"/>
             </a>
-            <div class="collapse navbar-collapse">
                 <?php
                 if(isset($_SESSION['nomUtilisateur'])){
                     ?>
-                    <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                    <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             <a href="../index.php" class="nav-link">
-                                <img src="../img/site/home.png" class="home_img ">
+                                <img src="../img/site/home.png" class="home_img" style="width: 30px; height: 30px;">
                             </a>
                         </li>
                         <li class="nav-item">
@@ -66,10 +65,10 @@ class VueNav {
                 }
                 else{
                     ?>
-                    <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                    <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             <a href="../index.php" class="nav-link">
-                                <img src="../img/site/home.png" class="home_img ">
+                                <img src="../img/site/accueil.png" class="home_img" style="width: 30px; height: 30px;">
                             </a>
                         </li>
                         <li class="nav-item">
@@ -91,7 +90,7 @@ class VueNav {
                             <a class="nav-link" id="contact" href="index.php?module=lecture_page&action=lecture_page&id=contact">Contact</a>
                         </li>
                     </ul>
-                    <ul class="navbar-nav ml-md-auto">
+                    <ul class="navbar-nav ml-md-2" style="margin-right: 20px;">
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?module=connexion&action=form_inscription">S'inscrire</a>
                         </li>
@@ -99,15 +98,11 @@ class VueNav {
                             <a class="nav-link" href="index.php?module=connexion&action=form_connexion"><NOBR>Se connecter</NOBR></a>
                         </li>
                     </ul>
-                </div>
                     <?php
                 }
                 ?>
         </nav>
-
 	<?php
-
 	}
-
 }
 ?>

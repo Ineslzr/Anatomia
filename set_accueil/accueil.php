@@ -4,7 +4,7 @@
 
 
         <!-- ELEMENT DE GAUCHE -->
-        <aside class="col-md-3 border" style="background-color:white; margin-left: 60px;">
+        <aside class="col-md-2 mx-auto border" style="background-color:white; margin-left: 60px; border-radius: 30px;">
             <div class="left-link">
                 <a class="nav-link nav-left" href="index.php?module=lire_article&action=afficher_liste_article&idSection=1">Le tête</a>
             </div>
@@ -23,10 +23,15 @@
         </aside>
 
         <!-- ELEMENT DU MILIEU -->
-        <section class="col-md-6 border text-center" style="background-color:white;">
+        <section class="col-md-7 mx-auto border text-center" style="background-color:white; border-radius: 30px;">
             <h1>BIENVENUE !</h1>
+            <br>
             <img src="../img/Bitmoji/bienvenue.png" class="img-center">
-            <p>Petite présentation rapide</p>
+            <br>
+            <br>
+            <br>
+            <h3>Petite présentation rapide</h3>
+            <br>
             <p>Le corps humain est une structure où se cache bien des phénomènes et mystères scientifiques !</p>
 
             <p>Nous vous proposons ici quelques articles sur ses différentes parties !</p>
@@ -38,43 +43,46 @@
             <p>Vous avez aussi la possibilité de faire des petits quizz !</p>
 
             <h2>Amusez-vous !</h2>
-
-            <div>
-                <img src="../img/Bitmoji/ines_rainbow.png" class="img-center bitmoji"><img src="../img/Bitmoji/darina_dinosaure.png" class="img-center bitmoji">
+            <!--   style="text-align: center;"  -->
+            <div style="text-align: center;">
+                <img src="../img/Bitmoji/ines_rainbow.png" class="img-center bitmoji">
+                <img src="../img/Bitmoji/darina_dinosaure.png" class="img-center bitmoji">
             </div>
-
+            <br>
             <h3>Disclaimer !</h3>
             <p>Nous ne sommes pas des spécialistes en biologie ! Ahaha</p>
             <p>Les articles proposés ont été pris majoritairement sur le site<a href="https://www.passeportsante.net/portail/parties-corps"> Passeport-Santé </a> !</p>
             <p>Pour retrouver l'article complet, veuillez consulter<a href="https://www.passeportsante.net/portail/parties-corps"> Passeport-Santé </a>!</p>
+            <br>
         </section>
 
         <!-- ELEMENT DE DROITE -->
-        <aside class="col-md-3 border text-center droite"style="width: 12rem; background-color: white;">
+        <aside class="col-md-3 mx-auto border text-center droite"style="width: 12rem; background-color: white; border-radius: 30px;">
             <div class="row">
                 <div class="right-link text-center">
+                    <br>
                     <h2>Faites un quiz ! </h2>
-                    <div  class="single-content">
-                        <p>Quiz n°1</p>
+                    <br>
+                    <div class="single-content">
                         <img class="img-fluid" src="../img/site/quiz.jpg" alt="quiz">
                         <div class="text-content">
-                            <a href="#"><h4>Quiz 1</h4></a>
+                            <a href="#"><h4>Quiz n°1</h4></a>
                         </div>
                     </div>
                     <br>
+                    <br>
                     <div class="single-content">
-                        <p>Quiz n°2</p>
                         <img class="img-fluid" src="../img/site/quiz.jpg" alt="quiz">
                         <div class="text-content">
-                            <a href="#"><h4>Quiz 2</h4></a>
+                            <a href="#"><h4>Quiz n°2</h4></a>
                         </div>
                     </div>
                     <br>
+                    <br>
                     <div class="single-content">
-                        <p>Quiz n°3</p>
                         <img class="img-fluid" src="../img/site/quiz.jpg" alt="quiz">
                         <div class="text-content">
-                            <a href="#"><h4>Quiz 3</h4></a>
+                            <a href="#"><h4>Quiz n°3</h4></a>
                         </div>
                     </div>
                 </div>

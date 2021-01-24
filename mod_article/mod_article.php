@@ -17,19 +17,6 @@ if(!defined('CONST_INCLUDE'))
 			else{
 				$action = "page_accueil";
 			}
-			/*
-			if (isset($_GET["id"])) {
-				$titre_article = $_GET["id"];
-			}
-			else{
-				$this->controleur->erreur404(); 
-			}
-			if (isset($_GET["name"])) {
-				$section = $_GET["name"];
-			}
-			else{
-				$this->controleur->erreur404(); 
-			}*/
 
 			switch ($action) {
 				case 'page_accueil':
