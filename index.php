@@ -54,10 +54,15 @@ define('CONST_INCLUDE', NULL);
             break;
 
         case "profil":
+            $title="Mon compte";
+            $css="./css/styleProfile.css";
             include "./composants/comp_nav/comp_nav.php";
             $nav = new ComposantNav();
             include "./mod_profil/mod_profil.php";
             $module=new ModProfil();
+            $js="./js/monProfil.js";
+            include "./composants/comp_footer/comp_footer.php";
+            $footer=new ComposantFooter();
             break;
 
         case 'ajout_article':

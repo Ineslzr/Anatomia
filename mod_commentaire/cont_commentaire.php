@@ -1,4 +1,9 @@
 <?php
+if(!defined('CONST_INCLUDE'))
+    die('Acces direct interdit !');
+?>
+
+<?php
 	include_once'vue_commentaire.php';
 	include_once'modele_commentaire.php';
 

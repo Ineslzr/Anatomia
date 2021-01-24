@@ -1,4 +1,9 @@
 <?php
+if(!defined('CONST_INCLUDE'))
+    die('Acces direct interdit !');
+?>
+
+<?php
 	include_once'vue_profil.php';
 	include_once'modele_profil.php';
 
@@ -10,7 +15,11 @@
 		function __construct(){
 			$this->vue = new VueProfil();
 			$this->modele = new ModeleProfil();
-		}	
+		}
+
+        function afficher_profil(){
+            $this->vue->afficher_profil();
+        }
 
 		function articles_lues(){
 			$tab=$this->modele->articles_lues();

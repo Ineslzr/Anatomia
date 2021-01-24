@@ -1,4 +1,8 @@
 <?php
+if(!defined('CONST_INCLUDE'))
+    die('Acces direct interdit !');
+?>
+<?php
 	include_once'vue_quiz.php';
 	include_once'modele_quiz.php';
 

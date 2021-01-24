@@ -29,7 +29,7 @@ class VueNav {
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../galerie.html">Anatomie</a>
+                            <a class="nav-link" id="enseignements" href="index.php?module=lecture_page&action=lecture_page&id=anatomie">Anatomie</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" id="enseignements" href="index.php?module=lecture_page&action=lecture_page&id=enseignements">Enseignements</a>
@@ -58,7 +58,10 @@ class VueNav {
                     </ul>
                     <ul class="navbar-nav ml-md-auto">
                         <li class="nav-item">
-                            <a class="nav-link\" href="../monProfil.php">Mon Compte</a>
+                            <a class="nav-link" href="index.php?module=profil&action=afficher_profil">Mon Compte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?module=connexion&action=deconnexion">Déconnexion</a>
                         </li>
                     </ul>
                     <?php
@@ -72,7 +75,7 @@ class VueNav {
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../galerie.html">Anatomie</a>
+                            <a class="nav-link" id="enseignements" href="index.php?module=lecture_page&action=lecture_page&id=anatomie">Anatomie</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" id="enseignements" href="index.php?module=lecture_page&action=lecture_page&id=enseignements">Enseignements</a>

@@ -1,4 +1,8 @@
 <?php
+if(!defined('CONST_INCLUDE'))
+    die('Acces direct interdit !');
+?>
+<?php
 
 	include_once 'cont_profil.php';
 
@@ -18,6 +22,11 @@
 			}
 
 			switch($action){
+
+                case "afficher_profil":
+                    $this->controleur->afficher_profil();
+                    break;
+
 				case "articles_lues":
 					$this->controleur->articles_lues();
 					break;

@@ -25,6 +25,4 @@ catch (Exception $e)
 	
 	$tab = array ("auteur" => $auteur, "commentaire"=> $commentaire, "date"=>$resultat->fetch()['date_commentaire']);
 	echo json_encode($tab);
-//}
-
-?>
+	

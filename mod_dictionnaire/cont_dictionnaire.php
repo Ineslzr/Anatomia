@@ -1,7 +1,10 @@
 <?php
-	if(!defined('CONST_INCLUDE'))
-		die('Acces direct interdit !');
-	
+if(!defined('CONST_INCLUDE'))
+    die('Acces direct interdit !');
+?>
+
+<?php
+
 	include_once'vue_dictionnaire.php';
 	include_once'modele_dictionnaire.php';
 
