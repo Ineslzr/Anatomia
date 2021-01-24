@@ -25,7 +25,7 @@ class VueNav {
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             <a href="../index.php" class="nav-link">
-                                <img src="../img/site/home.png" class="home_img" style="width: 30px; height: 30px;">
+                                <img src="../img/site/accueil.png" class="home_img" style="width: 30px; height: 30px;">
                             </a>
                         </li>
                         <li class="nav-item">

@@ -13,7 +13,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-sm-0">
                     <li class="nav-item">
                         <a href="./index.php" class="nav-link">
-                            <img src="../img/site/home.png" class="home_img">
+                            <img src="./img/site/accueil.png" class="home_img">
                         </a>
                     </li>
                     <li class="nav-item">
