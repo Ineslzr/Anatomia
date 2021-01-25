@@ -14,40 +14,45 @@ if(!defined('CONST_INCLUDE'))
 
 		function ajouter_article(){
 
-			$titre=$_POST['titre_article'];
-			$contenu=$_POST['contenu'];
-			$auteur='toto';
-			$id_section = 1;
-			$erreur = null;
+            $titre=$_POST['titre_article'];
+            $contenu=$_POST['contenu'];
+            $auteur=$_POST['auteur'];
+            $id_section = $_POST['section'];
+            $erreur = null;
 
-			if (strlen($titre) > 0) {
-				if (strlen($titre) <= 30) {
-					$titre = self::remove_script_balises($titre);
-					$titre_present = self::$bdd->prepare("SELECT titre_article FROM articles where titre_article = ?;");
-					$titre_present->execute(array($titre));
-					if (empty($titre_present->fetch())) {
-						if (strlen($contenu) > 0) {
-							$contenu = self::remove_script_balises($contenu);
-							$prepare = self::$bdd->prepare("INSERT INTO articles(titre_article,idSection,contenu,auteur) VALUES(?,?,?,?);");
-							$prepare-> execute(array($titre,$id_section,$contenu,$auteur));
-							return $titre;
-						}
-						else{
-							return $erreur;
-						}
-					}
-					else{
-						return $erreur;
-					}
-				}
-				else{
-					return $erreur;
-				}
-			}
-			else{
-				return $erreur;
-			}
-			return $erreur;
+            if (strlen($titre) > 0) {
+                if (strlen($titre) <= 30) {
+                    $titre = self::remove_script_balises($titre);
+                    $titre_present = self::$bdd->prepare("SELECT titre_article FROM articles where titre_article = ?;");
+
+                    $titre_present->execute(array($titre));
+
+                    if (empty($titre_present->fetch())) {
+
+                        if (strlen($contenu) > 0) {
+                            $contenu_balise = self::remove_script_balises($contenu);
+
+                            $prepare = self::$bdd->prepare("INSERT INTO articles(titre_article,idSection,contenu,auteur) VALUES(?,?,?,?);");
+                            $prepare-> execute(array($titre,$id_section,$contenu_balise,$auteur));
+
+                            return $titre;
+                        }
+                        else{
+                            return $erreur;
+                        }
+                    }
+                    else{
+                        return $erreur;
+                    }
+                }
+                else{
+                    return $erreur;
+                }
+            }
+            else{
+                return $erreur;
+            }
+            return $erreur;
 		}
 
 		function afficher_article($titre_article){
@@ -92,12 +97,12 @@ if(!defined('CONST_INCLUDE'))
 		}
 
 		function remove_script_balises($article_encode){
-	      	$article_encode = str_replace("<sript>", "", $article_encode); // <script></script>
-			$article_encode = str_replace("<script", "", $article_encode);  // <script type="text/javascript"></script> 
-	      	$article_encode = str_replace("</sript>", "", $article_encode);
+	      	$article_encode = str_replace("<sript>", " ", $article_encode); // <script></script>
+			$article_encode = str_replace("<script", " ", $article_encode);  // <script type="text/javascript"></script>
+	      	$article_encode = str_replace("</sript>", " ", $article_encode);
 
-	      	$article_encode = str_replace("<?php", "", $article_encode); /*<?php ?>*/
-	      	$article_encode = str_replace("?>", "", $article_encode);
+	      	$article_encode = str_replace("<?php", " ", $article_encode); /*<?php ?>*/
+	      	$article_encode = str_replace("?>", " ", $article_encode);
 
 	      	return $article_encode;
 		}

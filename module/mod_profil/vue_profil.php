@@ -18,7 +18,7 @@ if(!defined('CONST_INCLUDE'))
 					<div class="col-lg-10">
 						<div class="card">
 							<div class="pp">
-								<div class="circle"><img src="img/site/pp.png" id="photo" >
+								<div class="circle"><img src="img/site/ajoutez_pp.png" id="photo" >
 
 								</div>
 
@@ -34,9 +34,6 @@ if(!defined('CONST_INCLUDE'))
 									<p> Nom d'utilisateur : <?php echo $_SESSION['nomUtilisateur']; ?></p>
 									<p> Mail : <?php 
                                         echo $_SESSION['email'] ?></p>
-									<h2>Mes articles lues et mes quiz fait</h2>
-									<div class="articles_lues"></div>
-									<div class="quiz_fait"></div>
 									<br>
 								</div>
 							</div>

@@ -54,11 +54,3 @@ file.addEventListener('change',function(){
 	}
 });
 
-
-$(document).ready(function(){
-	$.post('index2.php?module=profil&action=articles_lues',function(data){
-        $(".articles_lues").html(data);
-
-    });
-
-});

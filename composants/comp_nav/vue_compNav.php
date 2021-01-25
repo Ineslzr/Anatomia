@@ -50,7 +50,7 @@ class VueNav {
                         if($_SESSION['role']==1){
                             ?>
                             <li class="nav-item">
-                                <a class="nav-link" id="contact" href="index.php?module=ajout_article&action=accueil_poster_article"><NOBR>Poster un article</NOBR></a>
+                                <a class="nav-link" id="contact" href="./mod_bbcode/bbcode.html"><NOBR>Poster un article</NOBR></a>
                             </li>
                             <?php
                         }
@@ -93,7 +93,7 @@ class VueNav {
                             <a class="nav-link" id="contact" href="index.php?module=lecture_page&action=lecture_page&id=contact">Contact</a>
                         </li>
                     </ul>
-                    <ul class="navbar-nav ml-md-2" style="margin-right: 20px;">
+                    <ul class="navbar-nav ml-md-auto" style="margin-right: 20px;">
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?module=connexion&action=form_inscription">S'inscrire</a>
                         </li>

@@ -6,7 +6,7 @@
         <!-- ELEMENT DE GAUCHE -->
         <aside class="col-md-2 border" style="background-color:white; margin-left: 60px; border-radius: 30px;">
             <div class="left-link">
-                <a class="nav-link nav-left" href="index.php?module=lire_article&action=afficher_liste_article&idSection=1">Le tête</a>
+                <a class="nav-link nav-left" href="index.php?module=lire_article&action=afficher_liste_article&idSection=1">La tête</a>
             </div>
             <div class="left-link">
                 <a class="nav-link nav-left" href="index.php?module=lire_article&action=afficher_liste_article&idSection=2">Les bras</a>
@@ -68,7 +68,7 @@
 					<br>
 					<img class="img-fluid" src="../img/site/quiz.jpg" alt="quiz" alt="Responsive image">
 					<div class="card-body">
-					    <a href="#" class="btn btn-primary btn-link-right"><h5>Quiz n°1</h5></a>
+					    <a href="index.php?module=quiz&action=afficher_quiz&idQuiz=1" class="btn btn-primary btn-link-right"><h5>Quiz n°1</h5></a>
 					</div>
 				</div>
 				<br>
@@ -76,7 +76,7 @@
 					<br>
 					<img class="img-fluid" src="../img/site/quiz.jpg" alt="quiz" alt="Responsive image">
 					<div class="card-body">
-					    <a href="#" class="btn btn-primary btn-link-right"><h5>Quiz n°1</h5></a>
+					    <a href="index.php?module=quiz&action=afficher_quiz&idQuiz=2" class="btn btn-primary btn-link-right"><h5>Quiz n°1</h5></a>
 					</div>
 				</div>
 				<br>
@@ -84,7 +84,7 @@
 					<br>
 					<img class="img-fluid" src="../img/site/quiz.jpg" alt="quiz" alt="Responsive image">
 					<div class="card-body">
-					    <a href="#" class="btn btn-primary btn-link-right"><h5>Quiz n°1</h5></a>
+					    <a href="index.php?module=quiz&action=afficher_quiz&idQuiz=3" class="btn btn-primary btn-link-right"><h5>Quiz n°1</h5></a>
 					</div>
 				</div>
 			</div>

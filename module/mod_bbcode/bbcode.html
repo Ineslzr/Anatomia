@@ -2,6 +2,7 @@
 <html>
 
 <head>
+	<meta charset="UTF-8">
 	<!-- Load jQuery  -->
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
@@ -28,10 +29,20 @@
 			<div class="container">
 				<div class="contact-form row">
 					<div class="col-lg-8 col-md-10">
-						<form action="index.php?module=ajout_article&action=ajouter_article" method="post" >
+						<form action="../index.php?module=ajout_article&action=ajouter_article" method="post" >
 							<div class="form-group col-lg-9">
 								<div class="row">
-									<input type="text" name="titre_article">
+									<p>Titre : <input type="text" name="titre_article"></p>
+									<p>Auteur : <input type="text" name="auteur"></p>
+									<label for="section-select">Choisir la section:</label>
+									<select name="section" id="section-select">
+										<option value="">--Please choose an option--</option>
+										<option value="1">Tête</option>
+										<option value="2">Bras</option>
+										<option value="3">Torse</option>
+										<option value="4">Reproduction</option>
+										<option value="5">Jambe</option>
+									</select>
 									<textarea id="editor" name="contenu" class="col-sm-9"></textarea>
 								</div>
 							</div>

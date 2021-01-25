@@ -40,7 +40,6 @@ if(!defined('CONST_INCLUDE'))
 
 		function afficher_article($titre_article){
 			$article = $this->modele->afficher_article($titre_article);
-			$this->vue->afficher_article($titre_article,$article);
 		}
 
 		function erreur404(){

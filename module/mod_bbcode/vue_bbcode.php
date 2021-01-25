@@ -28,10 +28,10 @@ if(!defined('CONST_INCLUDE'))
 			<?php
 		}
 
-		function afficher_article($titre_article,$article){
+		/*function afficher_article($titre_article,$article){
 			echo $titre_article;
 			echo $article;
-		}
+		}*/
 
 		function erreur_champ(){
 			echo "Il y a une erreur : votre titre est vide ou a déjà été utilisé ou il est beaucoup trooop long ou vous n'avez pas écrit d'article !";
