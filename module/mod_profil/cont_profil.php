@@ -21,11 +21,6 @@ if(!defined('CONST_INCLUDE'))
             $this->vue->afficher_profil();
         }
 
-		function articles_lues(){
-			$tab=$this->modele->articles_lues();
-			$this->vue->articles_lues($tab);
-		}
-
 		function erreur404(){
 			$error = $this->modele->erreur404();
 			$this->vue->erreur404($error);

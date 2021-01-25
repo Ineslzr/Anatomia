@@ -44,7 +44,7 @@ if(!defined('CONST_INCLUDE'))
 			 	</div>
 			 	<br>
 			 	<br>
-			 </div>
+			</div>
 			<?php
 		}
 

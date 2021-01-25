@@ -109,6 +109,7 @@ define('CONST_INCLUDE', NULL);
             include "./composants/comp_footer/comp_footer.php";
             $footer=new ComposantFooter();
             break;
+            
         case 'accueil':
             $title="Accueil";
             $css="./css/style.css";

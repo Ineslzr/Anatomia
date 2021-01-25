@@ -5,6 +5,7 @@
 
         <!-- ELEMENT DE GAUCHE -->
         <aside class="col-md-2 border" style="background-color:white; margin-left: 60px; border-radius: 30px;">
+            <br>
             <div class="left-link">
                 <a class="nav-link nav-left" href="index.php?module=lire_article&action=afficher_liste_article&idSection=1">La tête</a>
             </div>

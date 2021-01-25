@@ -27,9 +27,6 @@ if(!defined('CONST_INCLUDE'))
                     $this->controleur->afficher_profil();
                     break;
 
-				case "articles_lues":
-					$this->controleur->articles_lues();
-					break;
 				default:
 					$this->controleur->erreur404(); 
 					break;

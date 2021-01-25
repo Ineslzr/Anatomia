@@ -12,14 +12,6 @@ if(!defined('CONST_INCLUDE'))
 
 		}
 
-		function articles_lues(){
-			$membre=$_SESSION['nomUtilisateur'];
-			$req=self::$bdd->prepare("SELECT titre_article FROM lire where nomUtilisateur=?;");
-			$req->execute(array($membre));
-			$result=$req->fetchAll();
-			return $result;
-		}
-
 		function erreur404(){
 			$error = self::$bdd->prepare("SELECT contenu FROM page WHERE titre_page = 'erreur404';");
 			$error->execute();

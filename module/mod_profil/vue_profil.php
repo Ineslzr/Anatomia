@@ -25,7 +25,7 @@ if(!defined('CONST_INCLUDE'))
 							</div>
 							<div class="upload">
 								<input type="file" id="file">
-								<label for="file" id="uploadBtn">Choose Photo</label>
+								<label for="file" id="uploadBtn" style="text-align: center;">Choisir une photo</label>
 							</div>
 							<div class="info ">
 								<h1 class="title">Mon Profil </h1>
@@ -43,12 +43,6 @@ if(!defined('CONST_INCLUDE'))
 			</div>
 			<?php
 
-		}
-
-		function articles_lues($tab) {
-			foreach ($tab as $value) {
-			    echo "* ".$value["titre_article"]."<br>";
-			}
 		}
 		
 		function erreur404($error){

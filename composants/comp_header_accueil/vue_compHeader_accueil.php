@@ -52,7 +52,7 @@ class VueHeaderAccueil {
                     if($_SESSION['role']==1){
                         ?>
                         <li class="nav-item">
-                            <a class="nav-link" id="contact" href="./mod_bbcode/bbcode.html"><NOBR>Poster un article</NOBR></a>
+                            <a class="nav-link" id="contact" href="./module/mod_bbcode/bbcode.html"><NOBR>Poster un article</NOBR></a>
                         </li>
                         <?php
                     }
